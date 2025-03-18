@@ -877,40 +877,48 @@ svg.radar > g {
 </script>
 	  
 <script>async function takeScreenshot() {
-  const body = document.querySelector('body');
-  const isDarkMode = body.classList.contains('dark-mode');
-  const backgroundColor = isDarkMode ? '#0F0F0E' : '#ffffff'; // Black for dark mode, white for light mode
+  const chartContainer = document.querySelector('.screenshotcontainer');
+  const isDarkMode = document.body.classList.contains('dark-mode');
   
   try {
-    const element = document.querySelector('.screenshotcontainer'); // Capture the screenshotcontainer using the class name
-    if (!element) {
-      throw new Error('screenshotcontainer element not found');
-    }
+    const canvas = await html2canvas(chartContainer, {
+      backgroundColor: isDarkMode ? '#0F0F0E' : '#FFFFFF',
+      useCORS: true,
+      logging: false,
+      foreignObjectRendering: false,
+      onclone: function(clonedDoc) {
+        const similarPlayersContainer = clonedDoc.getElementById('similarPlayersContainer');
+        if (similarPlayersContainer) {
+          similarPlayersContainer.style.display = 'none';
+        }
+        
+        const positionSwitcher = clonedDoc.querySelector('.position-switcher-container');
+        const searchContainer = clonedDoc.querySelector('.search-container');
+        if (positionSwitcher) positionSwitcher.style.display = 'none';
+        if (searchContainer) searchContainer.style.display = 'none';
 
-    const canvas = await html2canvas(element, {
-        width: 468,
-        height: element.offsetHeight + 12, 
-        y: -10,
-        x: -10,
-        useCORS: true,
-        backgroundColor: backgroundColor, // Set the background color based on mode
-        scale: window.devicePixelRatio,
-        logging: false, // Disable logging for production
-        foreignObjectRendering: false,
+        const radarSVG = clonedDoc.querySelector('.radar');
+      if (radarSVG) {
+        radarSVG.style.display = 'block';
+        radarSVG.style.margin = '0 auto';
+        const svgGroup = radarSVG.querySelector('g');
+        if (svgGroup) {
+          svgGroup.setAttribute('transform', 'translate(195.5, 195.5)');
+        }
+      }
+      }
     });
-
+    
     canvas.toBlob(blob => {
       const link = document.createElement('a');
       link.href = URL.createObjectURL(blob);
-      link.download = 'screenshot.png';
+      link.download = 'DataMB Screenshot.png';
       link.click();
     }, 'image/png');
+    
   } catch (error) {
-    console.error('Error in takeScreenshot:', error);
-    // Handle errors appropriately (e.g., display to user or log)
   }
 }
-
 
   // Function to toggle dark mode
   function toggleDarkMode() {

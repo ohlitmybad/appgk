@@ -2,7 +2,7 @@
 <html>
 <head>
 
-<meta name="viewport" content="width=device-width, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="robots" content="noindex">
 <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
@@ -29,6 +29,49 @@
 </script>
 <defs>
 <style>
+
+:root {
+        --primary-color: #3498db;
+        --secondary-color: #2ecc71;
+        --background-color: #f5f7fa;
+        --container-bg: #ffffff;
+        --text-color: #333333;
+        --border-color: #e0e0e0;
+        --hover-color: #f0f0f0;
+        --button-color: #3498db;
+        --button-text: #ffffff;
+        --header-bg: #ffffff;
+        --shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        --table-bg: #f2f2f2;
+    }
+
+    .dark-mode {
+        --primary-color: #3498db;
+        --secondary-color: #2ecc71;
+        --background-color: #0e0f0f;
+        --container-bg: #1a1a1a;
+        --text-color: #e0e0e0;
+        --border-color: #333333;
+        --hover-color: #252525;
+        --button-color: #2980b9;
+        --button-text: #ffffff;
+        --header-bg: #0e0f0f;
+        --shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        --table-bg: #333333;
+    }
+
+
+    body {
+        font-family: 'Inter', sans-serif;
+        color: var(--text-color);
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        width: 470px;
+        overflow-x: hidden;
+        position: relative;
+        min-height: 100vh;
+    }
 
 #matchingNames {
   background-color: #ffffff;
@@ -84,433 +127,269 @@ body.dark-mode #matchingNames .name:hover {
 .team {
   color: #777777;
 }
+	
 
 
-
-.result-color-blue {
-  color: #3062FB !important;
-  stroke: #3062FB;
-  fill: #3062FB;
-  fill-opacity: 0.02;
-}
-
-
-.result-color-pink {
-  color: #F62681 !important;
-stroke: #F62681;
-fill: #F62681;
-fill-opacity: 0.02;
-
-}
-
-.result-color-orange {
-  color: #55d149 !important;
-stroke: #55d149;
-fill: #55d149;
-fill-opacity: 0.02;
-}
-
-.result-color-green {
-  color: #FFCF5F !important;
-stroke: #FFCF5F;
-fill: #FFCF5F;
-fill-opacity: 0.02;
-}
-
-
-
-
-
-.result-color-bleu {
-  color: #900C3F  !important;
-  stroke: #900C3F ;
-  fill: #900C3F ;
-  fill-opacity: 0.02;
-}
-
-
-.result-color-rose {
-  color: #F09710 !important;
-stroke: #F09710;
-fill: #F09710;
-fill-opacity: 0.02;
-
-}
-
-
+/* Color classes for radar chart */
 .result-color-1 {
   color: #3062FB !important;
   stroke: #3062FB;
   fill: #3062FB;
-  fill-opacity: 0.02;
+  fill-opacity: 0;
 }
-
-
 .result-color-2 {
   color: #F62681 !important;
-stroke: #F62681;
-fill: #F62681;
-fill-opacity: 0.02;
-
+  stroke: #F62681;
+  fill: #F62681;
+  fill-opacity: 0;
 }
-
 .result-color-3 {
   color: #55d149 !important;
-stroke: #55d149;
-fill: #55d149;
-fill-opacity: 0.02;
+  stroke: #55d149;
+  fill: #55d149;
+  fill-opacity: 0;
 }
-
 .result-color-4 {
   color: #FFCF5F !important;
-stroke: #FFCF5F;
-fill: #FFCF5F;
-fill-opacity: 0.02;
+  stroke: #FFCF5F;
+  fill: #FFCF5F;
+  fill-opacity: 0;
 }
-
-
 .result-color-5 {
-  color: #900C3F  !important;
-  stroke: #900C3F ;
-  fill: #900C3F ;
-  fill-opacity: 0.02;
+  color: rgb(153, 50, 204) !important;
+  stroke: rgb(153, 50, 204);
+  fill: rgb(153, 50, 204);
+  fill-opacity: 0;
 }
-
-
 .result-color-6 {
-  color: #F09710 !important;
-stroke: #F09710;
-fill: #F09710;
-fill-opacity: 0.02;
+  color: rgb(255, 140, 0) !important;
+  stroke: rgb(255, 140, 0);
+  fill: rgb(255, 140, 0);
+  fill-opacity: 0;
+}
 
-}
 .result-color-7 {
-  color: #3062FB !important;
-  stroke: #3062FB;
-  fill: #3062FB;
-  fill-opacity: 0.02;
+  color: rgb(30, 144, 255) !important;
+  stroke: rgb(30, 144, 255);
+  fill: rgb(30, 144, 255);
+  fill-opacity: 0;
 }
+
 
 
 .result-color-8 {
-  color: #F62681 !important;
-stroke: #F62681;
-fill: #F62681;
-fill-opacity: 0.02;
-
+  color: rgb(240, 128, 128) !important;
+  stroke: rgb(240, 128, 128);
+  fill: rgb(240, 128, 128);
+  fill-opacity: 0;
 }
 
+
+
+
 .result-color-9 {
-  color: #55d149 !important;
-stroke: #55d149;
-fill: #55d149;
-fill-opacity: 0.02;
+    color: rgb(144, 238, 144) !important;
+    stroke: rgb(144, 238, 144);
+    fill: rgb(144, 238, 144);
+    fill-opacity: 0;
 }
 
 .result-color-10 {
-  color: #FFCF5F !important;
-stroke: #FFCF5F;
-fill: #FFCF5F;
-fill-opacity: 0.02;
+  color: rgb(135, 206, 235) !important;
+  stroke: rgb(135, 206, 235);
+  fill: rgb(135, 206, 235);
+  fill-opacity: 0;
 }
+
+
 
 
 .result-color-11 {
-  color: #900C3F  !important;
-  stroke: #900C3F ;
-  fill: #900C3F ;
-  fill-opacity: 0.02;
+  color: rgb(246, 38, 129) !important;
+  stroke: rgb(246, 38, 129);
+  fill: rgb(246, 38, 129);
+  fill-opacity: 0;
 }
-
 
 .result-color-12 {
-  color: #F09710 !important;
-stroke: #F09710;
-fill: #F09710;
-fill-opacity: 0.02;
-
+  color: rgb(255, 69, 0) !important;
+  stroke: rgb(255, 69, 0);
+  fill: rgb(255, 69, 0);
+  fill-opacity: 0;
 }
-
 
 .result-color-13 {
-  color: #3062FB !important;
-  stroke: #3062FB;
-  fill: #3062FB;
-  fill-opacity: 0.02;
+  color: rgb(60, 179, 113) !important;
+  stroke: rgb(60, 179, 113);
+  fill: rgb(60, 179, 113);
+  fill-opacity: 0;
 }
 
-
 .result-color-14 {
-  color: #F62681 !important;
-stroke: #F62681;
-fill: #F62681;
-fill-opacity: 0.02;
-
+  color: rgb(138, 40, 165) !important;
+  stroke: rgb(138, 40, 165);
+  fill: rgb(138, 40, 165);
+  fill-opacity: 0;
 }
 
 .result-color-15 {
-  color: #55d149 !important;
-stroke: #55d149;
-fill: #55d149;
-fill-opacity: 0.02;
+  color: rgb(70, 130, 180) !important;
+  stroke: rgb(70, 130, 180);
+  fill: rgb(70, 130, 180);
+  fill-opacity: 0;
 }
 
 .result-color-16 {
-  color: #FFCF5F !important;
-stroke: #FFCF5F;
-fill: #FFCF5F;
-fill-opacity: 0.02;
+  color: rgb(208, 32, 144) !important;
+  stroke: rgb(208, 32, 144);
+  fill: rgb(208, 32, 144);
+  fill-opacity: 0;
 }
+
+
 
 
 .result-color-17 {
-  color: #900C3F  !important;
-  stroke: #900C3F ;
-  fill: #900C3F ;
-  fill-opacity: 0.02;
+  color: rgb(220, 20, 60) !important;
+  stroke: rgb(220, 20, 60);
+  fill: rgb(220, 20, 60);
+  fill-opacity: 0;
 }
+
 
 
 .result-color-18 {
-  color: #F09710 !important;
-stroke: #F09710;
-fill: #F09710;
-fill-opacity: 0.02;
-
+  color: rgb(255, 223, 60) !important;
+  stroke: rgb(255, 223, 60);
+  fill: rgb(255, 223, 60);
+  fill-opacity: 0;
 }
+
+
 .result-color-19 {
-  color: #3062FB !important;
-  stroke: #3062FB;
-  fill: #3062FB;
-  fill-opacity: 0.02;
+  color: rgb(238, 130, 238) !important;
+  stroke: rgb(238, 130, 238);
+  fill: rgb(238, 130, 238);
+  fill-opacity: 0;
 }
-
 
 .result-color-20 {
-  color: #F62681 !important;
-stroke: #F62681;
-fill: #F62681;
-fill-opacity: 0.02;
-
+  color: rgb(147, 112, 219) !important;
+  stroke: rgb(147, 112, 219);
+  fill: rgb(147, 112, 219);
+  fill-opacity: 0;
 }
 
+
+
 .result-color-21 {
-  color: #55d149 !important;
-stroke: #55d149;
-fill: #55d149;
-fill-opacity: 0.02;
+  color: rgb(34, 139, 34) !important;
+  stroke: rgb(34, 139, 34);
+  fill: rgb(34, 139, 34);
+  fill-opacity: 0;
 }
 
 .result-color-22 {
-  color: #FFCF5F !important;
-stroke: #FFCF5F;
-fill: #FFCF5F;
-fill-opacity: 0.02;
+  color: rgb(255, 198, 0) !important;
+  stroke: rgb(255, 198, 0);
+  fill: rgb(255, 198, 0);
+  fill-opacity: 0;
 }
+
+
 
 
 .result-color-23 {
-  color: #900C3F  !important;
-  stroke: #900C3F ;
-  fill: #900C3F ;
-  fill-opacity: 0.02;
+  color: rgb(255, 99, 71) !important;
+  stroke: rgb(255, 99, 71);
+  fill: rgb(255, 99, 71);
+  fill-opacity: 0;
 }
-
-
 .result-color-24 {
-  color: #F09710 !important;
-stroke: #F09710;
-fill: #F09710;
-fill-opacity: 0.02;
-
+  color: rgb(65, 105, 225) !important;
+  stroke: rgb(65, 105, 225);
+  fill: rgb(65, 105, 225);
+  fill-opacity: 0;
 }
-
-
 .result-color-25 {
-  color: #3062FB !important;
-  stroke: #3062FB;
-  fill: #3062FB;
-  fill-opacity: 0.02;
+  color: rgb(255, 215, 0) !important;
+  stroke: rgb(255, 215, 0);
+  fill: rgb(255, 215, 0);
+  fill-opacity: 0;
 }
 
 
 .result-color-26 {
-  color: #F62681 !important;
-stroke: #F62681;
-fill: #F62681;
-fill-opacity: 0.02;
-
+  color: rgb(0, 206, 209) !important;
+  stroke: rgb(0, 206, 209);
+  fill: rgb(0, 206, 209);
+  fill-opacity: 0;
 }
-
 .result-color-27 {
-  color: #55d149 !important;
-stroke: #55d149;
-fill: #55d149;
-fill-opacity: 0.02;
+  color: rgb(197, 142, 255) !important;
+  stroke: rgb(197, 142, 255);
+  fill: rgb(197, 142, 255);
+  fill-opacity: 0;
 }
-
 .result-color-28 {
-  color: #FFCF5F !important;
-stroke: #FFCF5F;
-fill: #FFCF5F;
-fill-opacity: 0.02;
+  color: rgb(46, 139, 87) !important;
+  stroke: rgb(46, 139, 87);
+  fill: rgb(46, 139, 87);
+  fill-opacity: 0;
 }
-
-
 .result-color-29 {
-  color: #900C3F  !important;
-  stroke: #900C3F ;
-  fill: #900C3F ;
-  fill-opacity: 0.02;
+  color: rgb(255, 105, 180) !important;
+  stroke: rgb(255, 105, 180);
+  fill: rgb(255, 105, 180);
+  fill-opacity: 0;
 }
-
-
 .result-color-30 {
-  color: #F09710 !important;
-stroke: #F09710;
-fill: #F09710;
-fill-opacity: 0.02;
-
+  color: rgb(255, 165, 0) !important;
+  stroke: rgb(255, 165, 0);
+  fill: rgb(255, 165, 0);
+  fill-opacity: 0;
 }
 .result-color-31 {
-  color: #3062FB !important;
-  stroke: #3062FB;
-  fill: #3062FB;
-  fill-opacity: 0.02;
+  color: rgb(255, 207, 95) !important;
+  stroke: rgb(255, 207, 95);
+  fill: rgb(255, 207, 95);
+  fill-opacity: 0;
 }
-
-
 .result-color-32 {
-  color: #F62681 !important;
-stroke: #F62681;
-fill: #F62681;
-fill-opacity: 0.02;
-
+  color: rgb(255, 182, 193) !important;
+  stroke: rgb(255, 182, 193);
+  fill: rgb(255, 182, 193);
+  fill-opacity: 0;
 }
-
 .result-color-33 {
-  color: #55d149 !important;
-stroke: #55d149;
-fill: #55d149;
-fill-opacity: 0.02;
+  color: rgb(102, 205, 170) !important;
+  stroke: rgb(102, 205, 170);
+  fill: rgb(102, 205, 170);
+  fill-opacity: 0;
 }
-
 .result-color-34 {
-  color: #FFCF5F !important;
-stroke: #FFCF5F;
-fill: #FFCF5F;
-fill-opacity: 0.02;
+  color: rgb(48, 98, 251) !important;
+  stroke: rgb(48, 98, 251);
+  fill: rgb(48, 98, 251);
+  fill-opacity: 0;
 }
-
-
 .result-color-35 {
-  color: #900C3F  !important;
-  stroke: #900C3F ;
-  fill: #900C3F ;
-  fill-opacity: 0.02;
+  color: rgb(186, 85, 211) !important;
+  stroke: rgb(186, 85, 211);
+  fill: rgb(186, 85, 211);
+  fill-opacity: 0;
 }
-
-
 .result-color-36 {
-  color: #F09710 !important;
-stroke: #F09710;
-fill: #F09710;
-fill-opacity: 0.02;
-
+  color: rgb(123, 104, 238) !important;
+  stroke: rgb(123, 104, 238);
+  fill: rgb(123, 104, 238);
+  fill-opacity: 0;
 }
-
-
 .result-color-37 {
-  color: #3062FB !important;
-  stroke: #3062FB;
-  fill: #3062FB;
-  fill-opacity: 0.02;
-}
-
-
-.result-color-38 {
-  color: #F62681 !important;
-stroke: #F62681;
-fill: #F62681;
-fill-opacity: 0.02;
-
-}
-
-.result-color-39 {
-  color: #55d149 !important;
-stroke: #55d149;
-fill: #55d149;
-fill-opacity: 0.02;
-}
-
-.result-color-40 {
-  color: #FFCF5F !important;
-stroke: #FFCF5F;
-fill: #FFCF5F;
-fill-opacity: 0.02;
-}
-
-
-.result-color-41 {
-  color: #900C3F  !important;
-  stroke: #900C3F ;
-  fill: #900C3F ;
-  fill-opacity: 0.02;
-}
-
-
-.result-color-42 {
-  color: #F09710 !important;
-stroke: #F09710;
-fill: #F09710;
-fill-opacity: 0.02;
-
-}
-.result-color-43 {
-  color: #3062FB !important;
-  stroke: #3062FB;
-  fill: #3062FB;
-  fill-opacity: 0.02;
-}
-
-
-.result-color-44 {
-  color: #F62681 !important;
-stroke: #F62681;
-fill: #F62681;
-fill-opacity: 0.02;
-
-}
-
-.result-color-45 {
-  color: #55d149 !important;
-stroke: #55d149;
-fill: #55d149;
-fill-opacity: 0.02;
-}
-
-.result-color-46 {
-  color: #FFCF5F !important;
-stroke: #FFCF5F;
-fill: #FFCF5F;
-fill-opacity: 0.02;
-}
-
-
-.result-color-47 {
-  color: #900C3F  !important;
-  stroke: #900C3F ;
-  fill: #900C3F ;
-  fill-opacity: 0.02;
-}
-
-
-.result-color-48 {
-  color: #F09710 !important;
-stroke: #F09710;
-fill: #F09710;
-fill-opacity: 0.02;
-
+  color: rgb(0, 128, 128) !important;
+  stroke: rgb(0, 128, 128);
+  fill: rgb(0, 128, 128);
+  fill-opacity: 0;
 }
 
 body, html {
@@ -535,23 +414,47 @@ text {
 }
 
 
-  #searchInput1::placeholder {
-    font-size : 18px; 
-  }
-
-
-
 
 
 
 .x-cell {
-  position: absolute;
-left: 380px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-left: 10px;
+  width: 30px;
 }
 
+.x-button {
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.x-button:hover {
+  background-color: #e0e0e0;
+}
+
+.dark-mode .x-button {
+  background-color: #333333;
+  color: #f2f2f2;
+}
+
+.dark-mode .x-button:hover {
+  background-color: #444444;
+}
 
 td {
     display: flex;
+    align-items: center;
 }
   th {
     font-weight: normal;
@@ -561,267 +464,17 @@ td {
   display: flex;
 }
 
-	
-.button-1 {
-  align-items: center;
-  background-color: #F9F9F9;
-  border-radius: 6px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-  color: #121212;
-  cursor: pointer;
-  display: inline-flex;
-  flex: 1 1 auto;
-  font-family: Inter,sans-serif;
-  font-size: 0.52rem;
-  font-weight: 700;
-  justify-content: center;
-  line-height: 1;
-  margin: 0;
-  outline: none;
-  padding: 0.4rem;
-  text-align: center;
-  text-decoration: none;
-  transition: box-shadow .1s,-webkit-box-shadow .1s;
-  white-space: nowrap;
-  border: 0;
-  user-select: none;
-  position: relative;
-  top: 6px;
-   left: 15px;
-width: 55px; 
- 
-  touch-action: manipulation;
-}
-
-.button-1:hover {
-   box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 3px;
-}
-
-.button-2 {
-  align-items: center;
-  background-color: #F9F9F9;
-  border-radius: 6px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-  color: #121212;
-  cursor: pointer;
-  display: inline-flex;
-  flex: 1 1 auto;
-  font-family: Inter,sans-serif;
-  font-size: 0.52rem;
-  font-weight: 700;
-  justify-content: center;
-  line-height: 1;
-  margin: 0;
-  outline: none;
-  padding: 0.4rem;
-  text-align: center;
-  text-decoration: none !important;
-  transition: box-shadow .1s,-webkit-box-shadow .1s;
-  white-space: nowrap;
-  border: 0;
-  user-select: none;
-  position: relative;
-  top: 6px;
-   left: 24px;
-width: 55px; 
- 
-  touch-action: manipulation;
-}
-
-.button-2:hover {
-   box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 3px;
-}
-
-.button-3 {
-  align-items: center;
-  background-color: #F9F9F9;
-  border-radius: 6px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-  color: #121212;
-  cursor: pointer;
-  display: inline-flex;
-  flex: 1 1 auto;
-  font-family: Inter,sans-serif;
-  font-size: 0.52rem;
-  font-weight: 700;
-  justify-content: center;
-  line-height: 1;
-  margin: 0;
-  outline: none;
-  padding: 0.4rem;
-  text-align: center;
-  text-decoration: none;
-  transition: box-shadow .1s,-webkit-box-shadow .1s;
-  white-space: nowrap;
-  border: 0;
-  user-select: none;
-  position: relative;
-  top: 6px;
-   left: 33px;
-width: 55px; 
- 
-  touch-action: manipulation;
-}
-
-.button-3:hover {
-   box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 3px;
-}
-
-.button-4 {
-  align-items: center;
-  background-color: #F9F9F9;
-  border-radius: 6px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-  color: #121212;
-  cursor: pointer;
-  display: inline-flex;
-  flex: 1 1 auto;
-  font-family: Inter,sans-serif;
-  font-size: 0.52rem;
-  font-weight: 700;
-  justify-content: center;
-  line-height: 1;
-  margin: 0;
-  outline: none;
-  padding: 0.4rem;
-  text-align: center;
-  text-decoration: none;
-  transition: box-shadow .1s,-webkit-box-shadow .1s;
-  white-space: nowrap;
-  border: 0;
-  user-select: none;
-  position: relative;
-  top: 6px;
-   left: 42px;
-width: 55px; 
- 
-  touch-action: manipulation;
-}
-
-.button-4:hover {
-   box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 3px;
-}
-
-
-
-.button-5 {
-  align-items: center;
-  background-color: #F9F9F9;
-  border-radius: 6px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-  color: #121212;
-  cursor: pointer;
-  display: inline-flex;
-  flex: 1 1 auto;
-  font-family: Inter,sans-serif;
-  font-size: 0.52rem;
-  font-weight: 700;
-  justify-content: center;
-  line-height: 1;
-  margin: 0;
-  outline: none;
-  padding: 0.4rem;
-  text-align: center;
-  text-decoration: none;
-  transition: box-shadow .1s,-webkit-box-shadow .1s;
-  white-space: nowrap;
-  border: 0;
-  user-select: none;
-  position: relative;
-  top: 6px;
-   left: 51px;
-width: 55px; 
- 
-  touch-action: manipulation;
-}
-
-.button-5:hover {
-   box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 3px;
-}
-
-.button-6 {
-  align-items: center;
-  background-color: #F9F9F9;
-  border-radius: 6px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-  color: #121212;
-  cursor: pointer;
-  display: inline-flex;
-  flex: 1 1 auto;
-  font-family: Inter,sans-serif;
-  font-size: 0.52rem;
-  font-weight: 700;
-  justify-content: center;
-  line-height: 1;
-  margin: 0;
-  outline: none;
-  padding: 0.4rem;
-  text-align: center;
-  text-decoration: none;
-  transition: box-shadow .1s,-webkit-box-shadow .1s;
-  white-space: nowrap;
-  border: 0;
-  user-select: none;
-  position: relative;
-  top: 6px;
-   left: 60px;
-width: 55px; 
- 
-  touch-action: manipulation;
-}
-
-.button-6:hover {
-   box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 3px;
-}
-
-
-
-
-.maxcontainer {
-position: absolute;
-    }
-
-
-    .toggle-container2 {
-display: flex;
-align-items: center;
-justify-content: center;
-position: absolute;
-  top: 400px;
-  left: -35.4px;
- width: 120px; 
-    }
 
     img {
-            width: 31px;
-top: -400px;
-pointer-events: none;
-z-index: 40000; 
-left: -953px;
-opacity: .8;
-        }
+    width: 38px;
+    margin-left: 10px;
+    margin-bottom: 8px;
+    opacity: 0.64;
+   }
 
 
-        .screenshotcontainer {
-            margin-left: 8px;
-        }
+ 
         
-
-.finalcontainer {
-  width: 100%; 
-}
-.emptycontainer {
-    height: 65px;
-    width: 100%;
-}
-
-
 
 
 
@@ -831,88 +484,44 @@ table {
 margin-top: 0%;
 margin-left: 0%;
   table-layout: auto;
+  margin-left:14px;
  
 }
 
 .similar-table {
-  position: absolute;
-  left: 78px;
-  width: 350px;
+  width: 300px;
   text-align: center;
-
+  margin: 0;
+  flex-grow: 1;
 }
 
-
-
-#searchInput1 {
-    width: 406px;
-    height: 32px;
-    font-size: 15px;
-    border-radius: 3px;
-    border-width: 0.5px;
-    padding: 1px;
-    padding-left: 5px; /* Adds extra padding on the left side */
-    margin-bottom: 1px;
-    margin-top: 16px;
-        }
-
-
-#searchButton1 {
-  width: 32px;
-color: black !important;
-height: 32px;
-cursor: pointer;
-margin-top: 16px;
-}
 
   
-  
-svg.radar {
-  width: 420px;
-  height: 435px;
-}
 
 
-.searchcontainer {
-    display: flex;
-    align-items: center;
-    position: relative;
-	  margin-left: 8px;
-	
-}
 
 .dark-mode-toggle {
-position: absolute;
-top: 60px;
-    left: 426px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 26.8px;
-    height: 26.8px;
-    background-color: #e0e0de;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  }
+        position: fixed;
+        bottom: 20px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: var(--container-bg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: var(--shadow);
+        z-index: 100;
+        transition: background-color 0.3s;
+    }
 
-	
- .button-10 {
-    position: absolute;
-    top: 400px;
-    left: 410px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30.8px;
-    height: 30.8px;
-    border-radius: 50%;
-  background-color: #e0e0de;
-  color: #333;
-  border: 0.1px solid #ccc;
-  cursor: pointer;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  }
+/* Removed old button-10 style */
+    
+    .screenshot-button:hover {
+        background-color: #2980b9;
+    }
 
 
 
@@ -958,19 +567,6 @@ body.dark-mode .dark-mode-toggle .toggle-icon::before {
   font-size: 16px; 
 }
 
-body.dark-mode #searchInput1 {
-    color: #000; 
-background-color : #cacaca;
-  }
-	
- body.dark-mode	  #searchInput1::placeholder {
-    color: #363636; 
-  }
-
- body.dark-mode	  #searchButton1 {
-    color: #fff !important; 
-background-color : #333333;
-  }
 
   body.dark-mode button {
   background-color: #333333;
@@ -985,7 +581,174 @@ body.dark-mode button:hover {
   color: initial;
 }
 
+.position-switcher-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 700px;
+    flex-wrap: wrap;
+    padding: 10px 12px;
 
+}
+
+
+.position-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    width: 40px; /* Fixed width for all position buttons */
+    background-color: var(--container-bg);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    transition: all 0.2s ease;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+
+.position-link:hover {
+    background-color: var(--hover-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.position-link.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* Dark mode styles for position switcher */
+.dark-mode .position-link {
+    border-color: var(--border-color);
+}
+
+.dark-mode .position-link.active {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Responsive styles for position switcher */
+@media screen and (max-width: 500px) {
+    .position-switcher-container {
+        gap: 8px;
+    }
+    
+    .position-link {
+        padding: 6px 10px;
+        min-width: 36px;
+        width: 45px; /* Slightly smaller fixed width for mobile */
+        font-size: 13px;
+    }
+}
+
+
+#searchInput1 {
+        flex: 1;
+        padding: 10px 12px;
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        font-size: 16px;
+        outline: none;
+        background-color: var(--container-bg);
+        color: var(--text-color);
+        transition: border-color 0.2s;
+        height: 20px;
+        margin-left: 12px;
+        width: 377px;
+        max-width: 100%;
+    }
+
+    #searchInput1:focus {
+        border-color: var(--primary-color);
+    }
+
+    #searchInput1::placeholder {
+        color: #999;
+    }
+
+
+    
+    #searchButton1 {
+        background-color: var(--button-color);
+        color: var(--button-text) !important;
+        border: none;
+        border-radius: 6px;
+        height: 36px;
+        width: 36px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        font-size: 18px;
+        right: 25px; /* Position from the right edge */
+        align-items: center;  /* Center vertically */
+        justify-content: center;  /* Center horizontally */
+        line-height: 1;  /* Fix line height */
+        padding: 0;  /* Remove any padding */
+    }
+
+
+    #searchButton1:hover {
+        background-color: #2980b9;
+    }
+    body.dark-mode #searchButton1:hover {
+        background-color: #2980b9;
+    }
+
+    body.dark-mode #searchButton1 {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);    }
+
+
+
+svg.radar {
+  height: 391px;
+  width: 391px;
+  display: block; /* Add display block */
+  margin: 0 auto; /* Center the radar chart */
+}
+
+/* Add specific styling for the SVG group */
+svg.radar > g {
+    transform-origin: center;
+    transform: translate(50%, 50%); /* Center the group */
+}
+
+.logo-screenshot-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.logo-screenshot-container img {
+  width: 38px;
+  opacity: 0.64;
+  margin-left: 5px;
+  flex-shrink: 0;
+}
+
+.button-10 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--button-color);
+  color: var(--button-text);
+  border: none;
+  border-radius: 6px;
+  height: 36px;
+  width: 36px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-right: 10px;
+  position: static;
+  flex-shrink: 0;
+}
 </style>
 </defs>
 	
@@ -1009,94 +772,104 @@ body.dark-mode button:hover {
 
 
 <body>
-  <a href="https://datamb.football/appgk/" target="_top" rel="noopener noreferrer">
-    <button class="button-1" role="button">GK</button></a>
-  
-  <a href="https://datamb.football/appcb/" target="_top" rel="noopener noreferrer">
-    <button class="button-2" role="button">CB</button></a>
-  
-  <a href="https://datamb.football/appfb/" target="_top" rel="noopener noreferrer">
-    <button class="button-3" role="button">FB</button></a>
-  
-  <a href="https://datamb.football/appcm/" target="_top" rel="noopener noreferrer">
-    <button class="button-4" role="button">CM</button></a>
-  
-  <a href="https://datamb.football/appfw/" target="_top" rel="noopener noreferrer">
-    <button class="button-5" role="button">FW</button></a>
-  
-  <a href="https://datamb.football/appst/" target="_top" rel="noopener noreferrer">
-    <button class="button-6" role="button">ST</button></a>
-  <div class="searchcontainer">
-    <input type="text" id="searchInput1" class="search-bar" placeholder="Enter keeper name..." />
-    &nbsp;<input type="button" id="searchButton1" value="+&nbsp;" />
-    <div class="dark-mode-toggle" onclick="toggleDarkMode()"><div class="toggle-icon"></div></div></div>
-    <div class="screenshotcontainer">
+  <div class="screenshotcontainer">
+    <div class="position-switcher-container">
+     
+          <span class="position-link active" style="user-select: none;">
+        <span>GK</span>
+    </span>
+    <a href="https://datamb.football/appcb/" target="_top" rel="noopener noreferrer" class="position-link">
+        <span>CB</span>
+    </a>
+
+      <a href="https://datamb.football/appfb/" target="_top" rel="noopener noreferrer" class="position-link">
+          <span>FB</span>
+      </a>
+      <a href="https://datamb.football/appcm/" target="_top" rel="noopener noreferrer" class="position-link">
+          <span>CM</span>
+      </a>
+      <a href="https://datamb.football/appfw/" target="_top" rel="noopener noreferrer" class="position-link">
+          <span>FW</span>
+      </a>
+      <a href="https://datamb.football/appst/" target="_top" rel="noopener noreferrer" class="position-link">
+          <span>ST</span>
+      </a>
+    </div>
+
+    <div class="search-container">
+      <div class="search-controls">
+        <input type="text" id="searchInput1" class="search-bar" data-i18n="search.placeholder2" placeholder="Enter keeper name..." />
+        <button id="searchButton1">+</button>
+      </div>
       <div id="matchingNames"></div>
-	<div id="resultsTable"></div>  
-  <div class="maxcontainer">
-  <div class="toggle-container2">
-    <img src="https://datamb.football/logo.png" alt="Logo">
-  </div>
-  <button onclick="takeScreenshot()" class="button-10"><div class="icon2"></div></button>
+    </div>
 
-  </div>
+    <div id="resultsTable"></div>
+    
+    <div class="radar-container" style="display: flex; justify-content: center; width: 100%; margin-top: 20px;">
+      <svg class="radar">
+        <g transform="translate(0,0)"><g class="axisWrapper">
+
+<g class="radar_label">
+  <text class="label" data-type="Aerial%" data-idx="0" data-i18n="radar.short" transform="translate(-35 -170.5) scale(1.13) rotate(-1.7)">Short%</text>
+</g>
+
+<g class="radar_label">
+  <text class="label" data-type="Long%" data-idx="6" data-i18n="radar.long" transform="matrix(0.57, -0.97, 0.97, 0.57, -156.7, -76.55) rotate(3.5)">Long%</text>
+</g>
+
+<g class="radar_label">
+  <text class="label" data-type="Passes" data-idx="5" data-i18n="radar.passes" transform="matrix(-0.43, -1.052, 1.052, -0.43, -154.8, 75.25) rotate(3.87)">Passes</text>
+</g>
+
+<g class="radar_label">
+  <text class="label" data-type="Exits" data-idx="4" data-i18n="radar.exits" transform="translate(-87.06 162.75) scale(1.13) rotate(20)">Exits</text>
+</g>
+
+<g class="radar_label">
+  <text class="label" data-type="Aerial" data-idx="3" data-i18n="radar.aerial" transform="translate(68.54 170.9) scale(1.13) rotate(-29)">Aerial</text>
+</g>
+
+<g class="radar_label">
+  <text class="label" data-type="Def Actions" data-idx="2" data-i18n="radar.defActions" transform="translate(174.1 -7.22) scale(1.13) rotate(99.11)">Def Actions</text>
+</g>
+
+<g class="radar_label">
+  <text class="label" data-type="Shotstopping" data-idx="1" data-i18n="radar.shotstopping" transform="translate(105.77 -145.78) scale(1.13) rotate(53.49)">Shot-stopping</text>
+</g>
 
 
-  <svg class="radar"><g transform="translate(223,225.77)"><g class="axisWrapper">
-    <g class="radar_label">
-        <text class="label" data-type="Aerial%" data-idx="0" transform="translate(-33.60 -154.8) rotate(-2)">Short%</text>
-    </g>
+<circle class="blackCircle" r="165" style="fill:none; stroke:#D3D3D3; stroke-width:1;"></circle>
+<circle class="gridCircle" r="165" style="fill: rgb(16, 135, 188); fill-opacity: 0.03;"></circle>
+<circle class="gridCircle" r="139" style="fill: rgb(16, 135, 188); fill-opacity: 0.03;"></circle>
+<circle class="gridCircle" r="104" style="fill: rgb(16, 135, 188); fill-opacity: 0.03;"></circle>
+<circle class="gridCircle" r="70" style="fill: rgb(16, 135, 188); fill-opacity: 0.03;"></circle>
+<circle class="gridCircle" r="35" style="fill: rgb(16, 135, 188); fill-opacity: 0.03;"></circle>
+
+
+<line x1="0" y1="0" x2="8.11" y2="164.74" stroke="#D3D3D3" stroke-width="1" transform="translate(-8.11, -164.74)"></line>
+<line x1="0" y1="0" x2="-123.52" y2="109.77" stroke="#D3D3D3" stroke-width="1" transform="translate(123.25, -109.77)"></line>
+<line x1="0" y1="0" x2="-162.88" y2="-28.1" stroke="#D3D3D3" stroke-width="1" transform="translate(163.09, 28.04)"></line>
+<line x1="0" y1="0" x2="-79.86" y2="-145.15" stroke="#D3D3D3" stroke-width="1" transform="translate(79.86, 144.53)"></line>
+<line x1="0" y1="0" x2="63.48" y2="-152.91" stroke="#D3D3D3" stroke-width="1" transform="translate(-63.48, 152.47)"></line>
+<line x1="0" y1="0" x2="158.9" y2="-45.8" stroke="#D3D3D3" stroke-width="1" transform="translate(-158.89, 45.63)"></line>
+<line x1="0" y1="0" x2="134.5" y2="95.58" stroke="#D3D3D3" stroke-width="1" transform="translate(-134.51, -95.67)"></line>
+
+
+<g class="radarWrapper"></g>
+</g></g>
+      </svg>
+    </div>
     
-    <g class="radar_label">
-        <text class="label" data-type="Long%" data-idx="6" transform="matrix(0.5, -0.86, 0.86, 0.5, -140.96, -73.54) rotate(3.5)">Long%</text>
-    </g>
+    <div class="logo-screenshot-container">
+      <img src="https://datamb.football/logo.png" alt="Logo">
+      <div id="similarPlayersContainer"></div>
+      <button onclick="takeScreenshot()" class="button-10"><div class="icon2"></div></button>
+    </div>
     
-    <g class="radar_label">
-        <text class="label" data-type="Passes" data-idx="5" transform="matrix(-0.38, -0.93, 0.93, -0.38, -142.8, 65.82) rotate(3.87)">Passes</text>
-    </g>
-    
-    <g class="radar_label">
-        <text class="label" data-type="Exits" data-idx="4" transform="translate(-80.53 148) rotate(20.3)">Exits</text>
-    </g>
-    
-    <g class="radar_label">
-        <text class="label" data-type="Aerial" data-idx="3" transform="translate(58.06 156.66) rotate(-28.32)">Aerials</text>
-    </g>
-    
-    <g class="radar_label">
-        <text class="label" data-type="Def Actions" data-idx="2" transform="translate(161.70 -5.45) rotate(100.11)">Def Actions</text>
-    </g>
-    
-    <g class="radar_label">
-        <text class="label" data-type="Shotstopping" data-idx="1" transform="translate(98.10 -132.22) rotate(53.8)">Shot-stopping</text>
-    </g>
-    
-    
-  
-  
-  <circle class="blackCircle" r="150" style="fill:none; stroke:#D3D3D3; stroke-width:1;"></circle>
-  <circle class="gridCircle" r="150" style="fill: rgb(16, 135, 188); fill-opacity: 0.03;"></circle>
-  <circle class="gridCircle" r="128" style="fill: rgb(16, 135, 188); fill-opacity: 0.03;"></circle>
-  <circle class="gridCircle" r="90" style="fill: rgb(16, 135, 188); fill-opacity: 0.03;"></circle>
-  <circle class="gridCircle" r="60" style="fill: rgb(16, 135, 188); fill-opacity: 0.03;"></circle>
-  <circle class="gridCircle" r="30" style="fill: rgb(16, 135, 188); fill-opacity: 0.03;"></circle></g>
-                                  
-    
-   
-  <line x1="0" y1="0" x2="7.37" y2="149.57" stroke="#D3D3D3" stroke-width="1" transform="translate(-7.36, -149.8)"></line>
-  <line x1="0" y1="0" x2="-112.26" y2="99.60" stroke="#D3D3D3" stroke-width="1" transform="translate(112.11, -99.6)"></line>
-  <line x1="0" y1="0" x2="-147.68" y2="-25.48" stroke="#D3D3D3" stroke-width="1" transform="translate(147.82, 25.44)"></line>
-  <line x1="0" y1="0" x2="-72.34" y2="-131.68" stroke="#D3D3D3" stroke-width="1" transform="translate(72.34, 131.4)"></line>
-  <line x1="0" y1="0" x2="57.50" y2="-138.88" stroke="#D3D3D3" stroke-width="1" transform="translate(-57.53, 138.51)"></line>
-  <line x1="0" y1="0" x2="144.16" y2="-41.52" stroke="#D3D3D3" stroke-width="1" transform="translate(-144.14, 41.48)"></line>
-  <line x1="0" y1="0" x2="122.14" y2="86.58" stroke="#D3D3D3" stroke-width="1" transform="translate(-122.357, -86.768)"></line>
-  
-  
-  
-  <g class="radarWrapper"></g>
-  </g></g>    
-  <div id="insertHere"></div>
-</div>
+    <div id="insertHere"></div>
+    <div class="dark-mode-toggle" onclick="toggleDarkMode()">
+      <div class="toggle-icon"></div>
 
 <script>
    
@@ -1117,46 +890,696 @@ const urls2 = [
 
 ];
 
-const _0x4585a8=_0x18a8;(function(_0x260e80,_0x16493c){const _0x494a7b=_0x18a8,_0x5a238d=_0x260e80();while(!![]){try{const _0xde55ba=-parseInt(_0x494a7b(0x223))/0x1+-parseInt(_0x494a7b(0x233))/0x2*(parseInt(_0x494a7b(0x219))/0x3)+-parseInt(_0x494a7b(0x204))/0x4+-parseInt(_0x494a7b(0x1f6))/0x5*(-parseInt(_0x494a7b(0x278))/0x6)+-parseInt(_0x494a7b(0x273))/0x7+parseInt(_0x494a7b(0x254))/0x8*(parseInt(_0x494a7b(0x20a))/0x9)+parseInt(_0x494a7b(0x257))/0xa;if(_0xde55ba===_0x16493c)break;else _0x5a238d['push'](_0x5a238d['shift']());}catch(_0x5cd734){_0x5a238d['push'](_0x5a238d['shift']());}}}(_0x3e56,0x5e8d8));function _0x18a8(_0x1f7b9b,_0x212d6b){const _0x3e56cd=_0x3e56();return _0x18a8=function(_0x18a861,_0x14ac0c){_0x18a861=_0x18a861-0x1e3;let _0x3789a5=_0x3e56cd[_0x18a861];return _0x3789a5;},_0x18a8(_0x1f7b9b,_0x212d6b);}const fetchPromises1=urls1[_0x4585a8(0x222)](_0x13f8a8=>fetch(_0x13f8a8)[_0x4585a8(0x275)](_0x2bb3a7=>_0x2bb3a7[_0x4585a8(0x216)]())),fetchPromises2=urls2[_0x4585a8(0x222)](_0x2184e1=>fetch(_0x2184e1)[_0x4585a8(0x275)](_0x1b01c9=>_0x1b01c9[_0x4585a8(0x216)]()));function processAndStoreData1(_0x59edef){const _0x1befb6=_0x4585a8;let _0x156969=0x1;_0x59edef['forEach'](_0x4c242d=>{const _0x28b5cb=_0x18a8,_0x5a01e9=XLSX['read'](new Uint8Array(_0x4c242d),{'type':_0x28b5cb(0x267)}),_0x10dc8b=_0x5a01e9['SheetNames'][0x0],_0x2415c3=_0x5a01e9['Sheets'][_0x10dc8b],_0x1c235c=XLSX['utils'][_0x28b5cb(0x218)](_0x2415c3,{'header':0x1}),_0x12208b=_0x1c235c[_0x28b5cb(0x28a)](0x1);_0x12208b[_0x28b5cb(0x1e3)](_0x182a64=>{const _0x4ace7a=_0x28b5cb;_0x182a64[_0x4ace7a(0x1ff)](''+_0x156969++),_0x182a64[_0x4ace7a(0x28e)](0xc,0x0,_0x182a64[_0x4ace7a(0x28e)](0x4,0x1)[0x0]),_0x182a64[_0x4ace7a(0x28e)](0x7,0x0,_0x182a64['splice'](0xb,0x1)[0x0]),_0x182a64[_0x4ace7a(0x28e)](0x9,0x0,_0x182a64[_0x4ace7a(0x28e)](0xa,0x1)[0x0]),_0x182a64[0xf]=_0x182a64[0x1]+_0x4ace7a(0x269),_0x182a64['splice'](0x10,0x1);const _0x441687=[_0x182a64[0x0],_0x182a64[0xf],_0x182a64[0x2],_0x182a64[0x3],_0x182a64[0x4],_0x182a64[0x5],_0x182a64[0xb],_0x182a64[0x6],_0x182a64[0xa],_0x182a64[0x8],_0x182a64[0x9],_0x182a64[0x7]];allData1[_0x4ace7a(0x231)](_0x441687);});});const _0x450535=[0x4,0x5,0x6,0x7,0x8,0x9,0xa],_0x446927=_0x450535[_0x1befb6(0x222)](_0x433ca4=>allData1[_0x1befb6(0x222)](_0x4e55ca=>parseFloat(_0x4e55ca[_0x433ca4]))),_0x554175=_0x446927[_0x1befb6(0x222)](_0x5f5666=>{const _0x52207f=_0x1befb6,_0xd84faa=[..._0x5f5666][_0x52207f(0x206)]((_0x4ce317,_0x48ee2b)=>_0x4ce317-_0x48ee2b);return _0x5f5666['map'](_0x4192b4=>{const _0x27d63f=_0x52207f,_0x42200d=_0xd84faa[_0x27d63f(0x1e7)](_0x4192b4)+0x1;return _0x42200d/_0xd84faa['length'];});});allData1[_0x1befb6(0x1e3)]((_0x443c7e,_0x58970b)=>{const _0x55fe6a=_0x1befb6;_0x450535[_0x55fe6a(0x1e3)]((_0xa3a1b2,_0x3118e5)=>{_0x443c7e[_0xa3a1b2]=_0x554175[_0x3118e5][_0x58970b]['toFixed'](0x3);});});}function processAndStoreData(_0x12773a){const _0x1dab8b=_0x4585a8;let _0x693650=0x1;_0x12773a[_0x1dab8b(0x1e3)](_0x5bc55a=>{const _0x57708a=_0x1dab8b,_0x5684d6=XLSX[_0x57708a(0x260)](new Uint8Array(_0x5bc55a),{'type':_0x57708a(0x267)}),_0x3941d7=_0x5684d6['SheetNames'][0x0],_0x416803=_0x5684d6[_0x57708a(0x248)][_0x3941d7],_0x500cea=XLSX[_0x57708a(0x26f)][_0x57708a(0x218)](_0x416803,{'header':0x1}),_0x411ab2=_0x500cea[_0x57708a(0x28a)](0x1);_0x411ab2[_0x57708a(0x1e3)](_0x5786cd=>{const _0x51171c=_0x57708a;_0x5786cd[_0x51171c(0x1ff)](''+_0x693650++),_0x5786cd[_0x51171c(0x28e)](0xc,0x0,_0x5786cd[_0x51171c(0x28e)](0x4,0x1)[0x0]),_0x5786cd[_0x51171c(0x28e)](0x7,0x0,_0x5786cd[_0x51171c(0x28e)](0xb,0x1)[0x0]),_0x5786cd['splice'](0x9,0x0,_0x5786cd['splice'](0xa,0x1)[0x0]),_0x5786cd[0xf]=_0x5786cd[0x1]+'\x2024/25',_0x5786cd[_0x51171c(0x28e)](0x10,0x1);const _0x5b5d84=[_0x5786cd[0x0],_0x5786cd[0xf],_0x5786cd[0x2],_0x5786cd[0x3],_0x5786cd[0x4],_0x5786cd[0x5],_0x5786cd[0xb],_0x5786cd[0x6],_0x5786cd[0xa],_0x5786cd[0x8],_0x5786cd[0x9],_0x5786cd[0x7]];allData2['push'](_0x5b5d84);});});const _0x2371dc=[0x4,0x5,0x6,0x7,0x8,0x9,0xa],_0x1e03cd=_0x2371dc[_0x1dab8b(0x222)](_0x5e2190=>allData2['map'](_0x10e662=>parseFloat(_0x10e662[_0x5e2190]))),_0x123583=_0x1e03cd['map'](_0x3f5a74=>{const _0x4700b0=[..._0x3f5a74]['sort']((_0x19680d,_0x5dc3ac)=>_0x19680d-_0x5dc3ac);return _0x3f5a74['map'](_0x42aabe=>{const _0x5ea544=_0x18a8,_0x1371f4=_0x4700b0[_0x5ea544(0x1e7)](_0x42aabe)+0x1;return _0x1371f4/_0x4700b0[_0x5ea544(0x253)];});});allData2[_0x1dab8b(0x1e3)]((_0x471a8f,_0x1f38b2)=>{const _0x2bc9d8=_0x1dab8b;_0x2371dc[_0x2bc9d8(0x1e3)]((_0x4af116,_0x15e6fb)=>{_0x471a8f[_0x4af116]=_0x123583[_0x15e6fb][_0x1f38b2]['toFixed'](0x3);});});}function _0x3e56(){const _0x2da2e4=['.fullName','resultsTable','addEventListener','result-color-42','innerHTML','result-color-7','add','has','read','age','result-color-45','setAttribute','result-color-27','result-color-10','pow','array','.radarPolygon.','\x2023/24','normalize','radarCircle\x20','Similar\x20data\x20to\x20','metrics-table','find','utils','Error\x20fetching\x20or\x20processing\x20data:','padding','polygon','2269596RyyHAc','result-color-26','then','div','team','318IMwUPT','paddingLeft','toLowerCase','appendChild','zIndex','result-color-38','width','sin','result-color-2','Backspace','key','querySelectorAll','result-color-1','circle','searchButton','8px','filter','result-color-37','slice','difference','textDecoration','result-color-36','splice','result-color-40','trim','getElementById','remove','matchingNames','forEach','click','closest','input','indexOf','10.8px','querySelector','includes','9px','all','result-color-pink','result-color-5','auto','startsWith','block','polyline','267px','autocomplete','join','37415lWxADd','result-color-41','relative','transform','result-color-13','span','.radarLines.','left','result-color-46','unshift','.metrics-table\x20tr:not(:first-child)','similar-table','name','result-color-47','3079044DgbJVx','1px\x20solid\x20#e0e0e0','sort','none','result-color-17','NFD','27yDypRf','from','result-color-20',')\x20-\x20','sqrt','result-color-32','table','searchButton1','result-color-11','pointer','points','searchInput1','arrayBuffer','createElement','sheet_to_json','190752ZbRkVd','button','split','radarPolygon\x20','result-color-orange','display','value','result-color-44','result-color-14','map','359269SitiwR','result-color-15','result-color-9','.name','http://www.w3.org/2000/svg','result-color-34','class','result-color-18','\x20min','radarLines\x20','.age','result-color-8','keyup','border','push','off','22civToG','result-color-16','.radar','result-color-22','result-color-29','classList','result-color-30','fill','textContent','createElementNS','replace','result-color-28','target','x-cell','fontSize','result-color-4','similarPlayersContainer','fillOpacity','error','index','dispatchEvent','Sheets','result-color-green','translate(223,225.77)','stroke-width','fontFamily','overflowY','style','result-color-blue','result-color-rose','.team','insertHere','length','415128HpOoXk','catch','9999','19876980lkkOUL'];_0x3e56=function(){return _0x2da2e4;};return _0x3e56();}Promise[_0x4585a8(0x1ec)](fetchPromises1)[_0x4585a8(0x275)](_0x4a548a=>{const _0x594380=_0x4585a8;processAndStoreData(_0x4a548a),Promise[_0x594380(0x1ec)](fetchPromises2)[_0x594380(0x275)](_0x5f2c2c=>{const _0x3c53fa=_0x594380;processAndStoreData1(_0x5f2c2c);const _0x17abe1=allData2['concat'](allData1);_0x17abe1[_0x3c53fa(0x1e3)]((_0x22a779,_0x490a94)=>{_0x22a779[0x0]=''+(_0x490a94+0x1);}),_0x17abe1[_0x3c53fa(0x1e3)](_0x55e86a=>{allDataAsString+=_0x55e86a['join'](',')+'\x0a';});const _0x1920ce=allDataAsString[_0x3c53fa(0x290)]()[_0x3c53fa(0x21b)]('\x0a'),_0x3a009d=[];for(const _0x256cad of _0x1920ce){const _0xa8e30a=_0x256cad[_0x3c53fa(0x21b)](','),_0x450314=_0xa8e30a[0x1],_0x203137=_0xa8e30a[0x3],_0x1528af=_0xa8e30a[0x2],_0x26286f=_0x450314+','+_0x203137+','+_0x1528af;_0x3a009d[_0x3c53fa(0x231)](_0x26286f);}const _0x726d30=_0x3a009d,_0x4a0357=document[_0x3c53fa(0x291)](_0x3c53fa(0x215));_0x4a0357[_0x3c53fa(0x263)](_0x3c53fa(0x1f4),_0x3c53fa(0x232));const _0x221d7a=document[_0x3c53fa(0x291)](_0x3c53fa(0x293)),_0x268c77=document[_0x3c53fa(0x291)](_0x3c53fa(0x286));function _0x3630a1(){const _0x2f0e46=_0x3c53fa,_0x6ccf56=_0x5a5c9f(_0x4a0357[_0x2f0e46(0x21f)][_0x2f0e46(0x27a)]()),_0x2905da=_0x726d30[_0x2f0e46(0x288)](function(_0x3a2faa){const _0x482961=_0x2f0e46,[_0x4c5638]=_0x3a2faa[_0x482961(0x21b)](','),_0x14cca8=_0x5a5c9f(_0x4c5638[_0x482961(0x27a)]());return _0x14cca8[_0x482961(0x1ea)](_0x6ccf56);});_0x221d7a[_0x2f0e46(0x25c)]='',_0x2905da['forEach'](function(_0x2e3356){const _0x365fb9=_0x2f0e46,[_0x558eb9,_0x54a83c,_0x3e479e]=_0x2e3356[_0x365fb9(0x21b)](','),_0x35b6e5=document[_0x365fb9(0x217)](_0x365fb9(0x276));_0x35b6e5[_0x365fb9(0x238)][_0x365fb9(0x25e)](_0x365fb9(0x202));const _0x49f1bd=document[_0x365fb9(0x217)](_0x365fb9(0x1fb));_0x49f1bd['textContent']=_0x558eb9,_0x49f1bd['classList']['add']('fullName'),_0x35b6e5[_0x365fb9(0x27b)](_0x49f1bd);const _0x1e6487=document[_0x365fb9(0x217)](_0x365fb9(0x1fb));_0x1e6487[_0x365fb9(0x23b)]='\x20('+_0x3e479e+',',_0x1e6487['classList'][_0x365fb9(0x25e)](_0x365fb9(0x261)),_0x35b6e5[_0x365fb9(0x27b)](_0x1e6487);const _0x39a1bd=document['createElement'](_0x365fb9(0x1fb));_0x39a1bd[_0x365fb9(0x23b)]='\x20'+_0x54a83c+')',_0x39a1bd[_0x365fb9(0x238)][_0x365fb9(0x25e)](_0x365fb9(0x277)),_0x35b6e5['appendChild'](_0x39a1bd),_0x35b6e5['addEventListener'](_0x365fb9(0x1e4),function(_0x15eaf5){const _0x391482=_0x365fb9,_0x5a33d1=_0x15eaf5[_0x391482(0x23f)][_0x391482(0x1e5)](_0x391482(0x226));if(_0x5a33d1){const _0x382af4=_0x5a33d1[_0x391482(0x1e9)](_0x391482(0x258))['textContent'],_0x4fbac9=_0x5a33d1['querySelector'](_0x391482(0x22d))[_0x391482(0x23b)][_0x391482(0x290)](),_0xce11a8=_0x5a33d1[_0x391482(0x1e9)](_0x391482(0x251))[_0x391482(0x23b)][_0x391482(0x290)]()[_0x391482(0x26a)](_0x391482(0x209))[_0x391482(0x23d)](/[\u0300-\u036f\s]/g,'')[_0x391482(0x23d)](/[^a-zA-Z]/g,''),_0x159ec6=_0x382af4+','+_0xce11a8+','+_0x4fbac9['substring'](0x1,_0x4fbac9[_0x391482(0x253)]-0x1);_0x4a0357[_0x391482(0x21f)]=_0x159ec6;const _0x24c47f=new KeyboardEvent(_0x391482(0x22f),{'key':'Enter'});_0x4a0357[_0x391482(0x247)](_0x24c47f);}}),_0x221d7a[_0x365fb9(0x27b)](_0x35b6e5);}),_0x6ccf56===''&&_0x2905da['length']===0x0?_0x221d7a[_0x2f0e46(0x24e)][_0x2f0e46(0x21e)]=_0x2f0e46(0x207):(_0x221d7a['style']['display']=_0x2f0e46(0x1f1),_0x221d7a[_0x2f0e46(0x24e)][_0x2f0e46(0x271)]=_0x2f0e46(0x287),_0x221d7a[_0x2f0e46(0x24e)]['position']=_0x2f0e46(0x1f8),_0x221d7a['style'][_0x2f0e46(0x1fd)]='1.9px',_0x221d7a[_0x2f0e46(0x24e)][_0x2f0e46(0x27c)]=_0x2f0e46(0x256),_0x221d7a['style'][_0x2f0e46(0x27e)]='392px',_0x221d7a[_0x2f0e46(0x24e)]['maxHeight']=_0x2f0e46(0x1f3),_0x221d7a['style'][_0x2f0e46(0x24d)]=_0x2f0e46(0x1ef),_0x221d7a['style'][_0x2f0e46(0x230)]=_0x2f0e46(0x205)),_0x6ccf56===''&&(_0x221d7a[_0x2f0e46(0x24e)][_0x2f0e46(0x21e)]='none');}_0x4a0357[_0x3c53fa(0x25a)](_0x3c53fa(0x1e6),_0x3630a1),_0x4a0357[_0x3c53fa(0x25a)](_0x3c53fa(0x22f),function(_0x4ac315){const _0x513ae6=_0x3c53fa;if(_0x4ac315[_0x513ae6(0x282)]==='Enter')searchButton1[_0x513ae6(0x1e4)]();else _0x4ac315[_0x513ae6(0x282)]===_0x513ae6(0x281)&&_0x3630a1();});const _0xe04835=allDataAsString;let _0x4286eb=_0xe04835['trim']()['split']('\x0a')[_0x3c53fa(0x222)](_0x5951ff=>_0x5951ff['split'](','));function _0x5efd37(_0x2892a4,_0x27fc9e){const _0x114078=_0x3c53fa;let _0x20f3b4=0x0;for(let _0x34f44b=0x4;_0x34f44b<=0xa;_0x34f44b++){const _0x1f2ec6=parseFloat(_0x2892a4[_0x34f44b]),_0x512a43=parseFloat(_0x27fc9e[_0x34f44b]);_0x20f3b4+=Math[_0x114078(0x266)](_0x1f2ec6-_0x512a43,0x2);}return Math[_0x114078(0x20e)](_0x20f3b4);}const _0x1f6b71=[_0x3c53fa(0x24f),_0x3c53fa(0x1ed),_0x3c53fa(0x21d),_0x3c53fa(0x249),'result-color-bleu',_0x3c53fa(0x250),_0x3c53fa(0x284),_0x3c53fa(0x280),'result-color-3',_0x3c53fa(0x242),_0x3c53fa(0x1ee),'result-color-6',_0x3c53fa(0x25d),_0x3c53fa(0x22e),_0x3c53fa(0x225),_0x3c53fa(0x265),_0x3c53fa(0x212),'result-color-12',_0x3c53fa(0x1fa),_0x3c53fa(0x221),_0x3c53fa(0x224),_0x3c53fa(0x234),_0x3c53fa(0x208),_0x3c53fa(0x22a),'result-color-19',_0x3c53fa(0x20c),'result-color-21',_0x3c53fa(0x236),'result-color-23','result-color-24','result-color-25',_0x3c53fa(0x274),_0x3c53fa(0x264),_0x3c53fa(0x23e),_0x3c53fa(0x237),_0x3c53fa(0x239),'result-color-31',_0x3c53fa(0x20f),'result-color-33',_0x3c53fa(0x228),'result-color-35',_0x3c53fa(0x28d),_0x3c53fa(0x289),_0x3c53fa(0x27d),'result-color-39',_0x3c53fa(0x28f),_0x3c53fa(0x1f7),_0x3c53fa(0x25b),'result-color-43',_0x3c53fa(0x220),_0x3c53fa(0x262),_0x3c53fa(0x1fe),_0x3c53fa(0x203),'result-color-48'];let _0x1070be=[];function _0x5a5c9f(_0x19edaa){const _0x31530e=_0x3c53fa;return _0x19edaa[_0x31530e(0x26a)](_0x31530e(0x209))['replace'](/[\u0300-\u036f\s]/g,'')[_0x31530e(0x23d)](/Ø/g,'O')[_0x31530e(0x23d)](/ø/g,'o')[_0x31530e(0x23d)](/ı/g,'i');}function _0x322179(_0x1eaa99){const _0x362661=_0x3c53fa,_0x5c70d8=_0x1eaa99['split'](',')[_0x362661(0x222)](_0x4e0997=>_0x4e0997[_0x362661(0x290)]()),_0x1b148c=_0x5c70d8[0x0];let _0x47b673,_0x66f7bc;_0x5c70d8[_0x362661(0x253)]>0x1&&(_0x47b673=_0x5c70d8[0x1][_0x362661(0x290)](),_0x5c70d8['length']>0x2&&(_0x66f7bc=_0x5c70d8[0x2][_0x362661(0x290)]()));const _0x5dc2f5=_0x4286eb[_0x362661(0x288)](_0x279678=>{const _0x5701d0=_0x362661,_0xd14156=_0x5a5c9f(_0x279678[0x1][_0x5701d0(0x27a)]()),_0x14e057=_0x5a5c9f(_0x279678[0x2][_0x5701d0(0x27a)]()),_0x464f61=_0x279678[0x3][_0x5701d0(0x290)]()['toLowerCase'](),_0x5322d0=_0xd14156[_0x5701d0(0x1ea)](_0x5a5c9f(_0x1b148c[_0x5701d0(0x27a)]())),_0x535d3d=!_0x47b673||_0x464f61===_0x5a5c9f(_0x47b673['toLowerCase']()),_0x572808=!_0x66f7bc||_0x14e057===_0x5a5c9f(_0x66f7bc['toLowerCase']());return _0x5322d0&&_0x535d3d&&_0x572808;});return _0x5dc2f5;}function _0x318a30(_0x4e4d33,_0x27cad6,_0x4ecd8e){const _0x1c88d5=_0x3c53fa,_0x36fb87=document[_0x1c88d5(0x291)](_0x1c88d5(0x259)),_0x22e787=[],_0xf019e3=_0x36fb87['querySelector']('th')!==null,_0x384e96=_0xf019e3?_0x36fb87[_0x1c88d5(0x1e9)](_0x1c88d5(0x210)):document[_0x1c88d5(0x217)](_0x1c88d5(0x210));_0x384e96[_0x1c88d5(0x238)][_0x1c88d5(0x25e)](_0x1c88d5(0x26d));if(!_0xf019e3){const _0x224958=document[_0x1c88d5(0x217)]('tr');for(let _0x40fe54=0x1;_0x40fe54<_0x22e787[_0x1c88d5(0x253)];_0x40fe54++){const _0x20de08=document[_0x1c88d5(0x217)]('th');_0x20de08[_0x1c88d5(0x23b)]=_0x22e787[_0x40fe54],_0x224958[_0x1c88d5(0x27b)](_0x20de08);}const _0x5572e9=document[_0x1c88d5(0x217)]('th');_0x5572e9['textContent']='',_0x224958[_0x1c88d5(0x27b)](_0x5572e9),_0x384e96['appendChild'](_0x224958);}const _0x2a876c=_0x4286eb[_0x27cad6],_0x32b829=document[_0x1c88d5(0x217)]('tr');for(let _0x522704=0x1;_0x522704<=0xb;_0x522704++){if(_0x522704===0x1||_0x522704===0x2||_0x522704===0x3||_0x522704===0xb){const _0x7c6ece=document['createElement']('td');_0x522704===0xb?_0x7c6ece['textContent']=_0x2a876c[_0x522704]+_0x1c88d5(0x22b):_0x7c6ece['textContent']=_0x2a876c[_0x522704]+',',_0x7c6ece[_0x1c88d5(0x238)][_0x1c88d5(0x25e)](_0x4ecd8e),_0x32b829[_0x1c88d5(0x27b)](_0x7c6ece);}}const _0xc06cf3=document['createElement']('td'),_0x7646d=document[_0x1c88d5(0x217)](_0x1c88d5(0x21a));_0x7646d[_0x1c88d5(0x23b)]='x',_0x7646d[_0x1c88d5(0x238)][_0x1c88d5(0x25e)]('x-button'),_0xc06cf3['classList']['add'](_0x1c88d5(0x240)),_0x7646d[_0x1c88d5(0x25a)]('click',function(){const _0x52434e=_0x1c88d5;_0x32b829[_0x52434e(0x292)]();const _0x31b7aa=document[_0x52434e(0x283)](_0x52434e(0x268)+_0x4ecd8e),_0x221065=document[_0x52434e(0x283)](_0x52434e(0x1fc)+_0x4ecd8e),_0x21d306=document[_0x52434e(0x283)]('.radarCircle.'+_0x4ecd8e);_0x31b7aa[_0x52434e(0x1e3)](_0x29c002=>_0x29c002[_0x52434e(0x292)]()),_0x221065[_0x52434e(0x1e3)](_0x24d6a6=>_0x24d6a6[_0x52434e(0x292)]()),_0x21d306['forEach'](_0xaf0bca=>_0xaf0bca[_0x52434e(0x292)]());const _0x53953c=document[_0x52434e(0x283)]('.metrics-table\x20tr:not(:first-child)');if(_0x53953c[_0x52434e(0x253)]>0x0){const _0x5e18ff=_0x53953c[_0x53953c[_0x52434e(0x253)]-0x1],_0x36e7dc=_0x5e18ff['firstChild'][_0x52434e(0x23b)][_0x52434e(0x21b)](',')[0x0],_0x121a81=_0x4286eb[_0x52434e(0x26e)](_0x4847e5=>_0x4847e5[0x1]===_0x36e7dc);_0x121a81&&_0x7e6c13(_0x121a81);}else{const _0x5124b8=document[_0x52434e(0x291)](_0x52434e(0x243));_0x5124b8&&(_0x5124b8['innerHTML']='');}}),_0xc06cf3[_0x1c88d5(0x27b)](_0x7646d),_0x32b829[_0x1c88d5(0x27b)](_0xc06cf3),_0x384e96[_0x1c88d5(0x27b)](_0x32b829);!_0xf019e3&&_0x36fb87['appendChild'](_0x384e96);const _0x4392fa=_0x4286eb[_0x27cad6][_0x1c88d5(0x1f5)](',\x20'),_0x35b910=0x96,_0x5590fb=[0x0,0x0],_0x598200=[0x0,0x2*Math['PI']/0x7,0x4*Math['PI']/0x7,0x6*Math['PI']/0x7,0x8*Math['PI']/0x7,0xa*Math['PI']/0x7,0xc*Math['PI']/0x7];function _0x3a33da(_0xaa1cf8,_0x31b3dc){const _0x2d3cbe=_0x1c88d5;let _0x5461fa=_0x598200[_0xaa1cf8-0x1];_0x5461fa+=0x2*Math['PI']/0x7*0.2;const _0x4af19d=0x96*_0x31b3dc*Math['cos'](_0x5461fa),_0x47475f=0x96*_0x31b3dc*Math[_0x2d3cbe(0x27f)](_0x5461fa);return{'x':_0x4af19d,'y':_0x47475f};}const _0x5de362=document[_0x1c88d5(0x1e9)](_0x1c88d5(0x235)),_0x3b7ddf=_0x5de362[_0x1c88d5(0x27b)](document[_0x1c88d5(0x23c)](_0x1c88d5(0x227),'g'));_0x3b7ddf[_0x1c88d5(0x263)](_0x1c88d5(0x1f9),_0x1c88d5(0x24a)),_0x3b7ddf[_0x1c88d5(0x25c)]='';const _0x2a87da=[],_0x35ab66=_0x4392fa[_0x1c88d5(0x21b)](',');for(let _0x9b73e9=0x4;_0x9b73e9<0xb;_0x9b73e9++){_0x2a87da[_0x1c88d5(0x231)]({'axis':_0x9b73e9-0x3,'value':parseFloat(_0x35ab66[_0x9b73e9])});}const _0x4a8027=_0x2a87da[_0x1c88d5(0x222)](({axis:_0x540dc4,value:_0x1d6ad9})=>{const {x:_0x9d1546,y:_0x1e16f3}=_0x3a33da(_0x540dc4,_0x1d6ad9);return _0x9d1546+','+_0x1e16f3;})[_0x1c88d5(0x1f5)]('\x20'),_0x2c2bc8=document['createElementNS'](_0x1c88d5(0x227),_0x1c88d5(0x1f2));_0x2c2bc8['setAttribute'](_0x1c88d5(0x229),_0x1c88d5(0x22c)+_0x4ecd8e),_0x2c2bc8['setAttribute'](_0x1c88d5(0x214),_0x4a8027+'\x20'+_0x4a8027[_0x1c88d5(0x21b)]('\x20')[0x0]),_0x2c2bc8[_0x1c88d5(0x263)](_0x1c88d5(0x24b),'3'),_0x2c2bc8[_0x1c88d5(0x263)](_0x1c88d5(0x23a),_0x1c88d5(0x207)),_0x3b7ddf['appendChild'](_0x2c2bc8);const _0x1b585f=document[_0x1c88d5(0x23c)](_0x1c88d5(0x227),_0x1c88d5(0x272));_0x1b585f[_0x1c88d5(0x263)](_0x1c88d5(0x229),_0x1c88d5(0x21c)+_0x4ecd8e),_0x1b585f['setAttribute'](_0x1c88d5(0x214),_0x4a8027),_0x1b585f['style'][_0x1c88d5(0x244)]='0.2',_0x3b7ddf[_0x1c88d5(0x27b)](_0x1b585f),_0x2a87da['forEach'](({axis:_0x37164d,value:_0x1e0945})=>{const _0x2045ab=_0x1c88d5,{x:_0x306941,y:_0x371317}=_0x3a33da(_0x37164d,_0x1e0945),_0x5be399=document[_0x2045ab(0x23c)](_0x2045ab(0x227),_0x2045ab(0x285));_0x5be399[_0x2045ab(0x263)](_0x2045ab(0x229),_0x2045ab(0x26b)+_0x4ecd8e),_0x5be399['style'][_0x2045ab(0x244)]='0.86',_0x5be399[_0x2045ab(0x263)]('r','6'),_0x5be399[_0x2045ab(0x263)]('cx',_0x306941),_0x5be399[_0x2045ab(0x263)]('cy',_0x371317),_0x3b7ddf[_0x2045ab(0x27b)](_0x5be399);});}function _0x5285f0(){const _0x34e2b0=_0x3c53fa,_0x1c4e24=document[_0x34e2b0(0x291)](_0x34e2b0(0x215)),_0x20e0f6=document['getElementById'](_0x34e2b0(0x211)),_0x116b22=document[_0x34e2b0(0x291)]('resultsTable'),_0x29d87e=new Set(),_0x164d1f=document[_0x34e2b0(0x217)]('ul');_0x164d1f[_0x34e2b0(0x24e)][_0x34e2b0(0x24c)]='Arial,\x20sans-serif',_0x164d1f[_0x34e2b0(0x24e)]['listStyleType']=_0x34e2b0(0x207),_0x164d1f[_0x34e2b0(0x24e)][_0x34e2b0(0x279)]=_0x34e2b0(0x1eb),_0x116b22[_0x34e2b0(0x27b)](_0x164d1f);let _0x45fb06=0x0;_0x20e0f6[_0x34e2b0(0x25a)](_0x34e2b0(0x1e4),function(){const _0x59075a=_0x34e2b0,_0x18adac=_0x1c4e24[_0x59075a(0x21f)],_0x4e41fc=_0x322179(_0x18adac);if(_0x4e41fc){const _0x17a6d5=parseInt(_0x4e41fc[0x0]),_0x3f8f10=_0x4e41fc[0x1]+'\x20('+_0x4e41fc[0x2]+',\x20'+_0x4e41fc[0x3]+_0x59075a(0x20d)+_0x4e41fc[0xb]+_0x59075a(0x22b),_0x4f1d46=_0x1f6b71[_0x45fb06%_0x1f6b71[_0x59075a(0x253)]];if(!_0x29d87e[_0x59075a(0x25f)](_0x3f8f10)){const _0x492493=document[_0x59075a(0x217)]('li');_0x492493[_0x59075a(0x23b)]=_0x3f8f10,_0x492493[_0x59075a(0x238)][_0x59075a(0x25e)](_0x4f1d46),_0x318a30(_0x3f8f10,_0x17a6d5-0x1,_0x4f1d46),_0x45fb06++;}}});}_0x5285f0();const _0xd12d1b=document[_0x3c53fa(0x217)](_0x3c53fa(0x276));_0xd12d1b['id']=_0x3c53fa(0x243);const _0x515d18=document['getElementById'](_0x3c53fa(0x252));_0x515d18[_0x3c53fa(0x27b)](_0xd12d1b);let _0x3dc8a7=0x0;searchButton1[_0x3c53fa(0x25a)](_0x3c53fa(0x1e4),function(){const _0x47a451=_0x3c53fa,_0xcd475a=_0x4a0357[_0x47a451(0x21f)],_0x268df8=_0x322179(_0xcd475a);if(_0x268df8[_0x47a451(0x253)]>0x0){const _0x25925d=_0x268df8[0x0];_0x7e6c13(_0x25925d),_0x3dc8a7++;}_0x4a0357[_0x47a451(0x21f)]='',_0x3630a1();});function _0x7e6c13(_0x4b7d2d){const _0x445be1=_0x3c53fa,_0x5e2bb7=parseInt(_0x4b7d2d[0x0])-0x1,_0x1e6e07=[],_0x16d941=document[_0x445be1(0x283)](_0x445be1(0x200));let _0x7c520e='';if(_0x16d941['length']>0x0){const _0x161c6b=_0x16d941[_0x16d941[_0x445be1(0x253)]-0x1],_0x2e4c4a=_0x161c6b[_0x445be1(0x1e9)]('td:first-child'),_0x53c073=Array[_0x445be1(0x20b)](_0x2e4c4a[_0x445be1(0x238)]);_0x7c520e=_0x53c073[_0x445be1(0x26e)](_0x5622a8=>_0x5622a8[_0x445be1(0x1f0)]('result-color-'));}for(let _0xfe223b=0x0;_0xfe223b<_0x4286eb[_0x445be1(0x253)];_0xfe223b++){if(_0xfe223b!==_0x5e2bb7){const _0x108e1a=_0x5efd37(_0x4b7d2d,_0x4286eb[_0xfe223b]);_0x1e6e07[_0x445be1(0x231)]({'index':_0xfe223b,'difference':_0x108e1a});}}_0x1e6e07['sort']((_0x1e1928,_0x403e0e)=>_0x1e1928['difference']-_0x403e0e[_0x445be1(0x28b)]);const _0x4720f8=_0x1e6e07[_0x445be1(0x28a)](0x0,0x3),_0x3b7ac7=document['getElementById'](_0x445be1(0x243));_0x3b7ac7[_0x445be1(0x25c)]='';const _0x3352ee=document[_0x445be1(0x217)](_0x445be1(0x210));_0x3352ee[_0x445be1(0x238)][_0x445be1(0x25e)](_0x445be1(0x201));const _0x361b45=document[_0x445be1(0x217)]('tr'),_0x122345=document['createElement']('th');_0x122345['setAttribute']('colspan','5'),_0x122345[_0x445be1(0x23b)]=_0x445be1(0x26c)+_0x4b7d2d[0x1],_0x122345[_0x445be1(0x238)][_0x445be1(0x25e)](_0x7c520e||_0x1f6b71[_0x3dc8a7%_0x1f6b71[_0x445be1(0x253)]]),_0x361b45[_0x445be1(0x27b)](_0x122345),_0x3352ee[_0x445be1(0x27b)](_0x361b45);const _0x3e76ea=document[_0x445be1(0x217)]('tr');for(let _0x2bc4bd=0x0;_0x2bc4bd<_0x4720f8['length'];_0x2bc4bd++){const _0x47e4b2=_0x4720f8[_0x2bc4bd][_0x445be1(0x246)],_0x23d60a=_0x4286eb[_0x47e4b2][0x1],_0x455fd6=document[_0x445be1(0x217)]('td');_0x455fd6[_0x445be1(0x23b)]=_0x23d60a,_0x455fd6[_0x445be1(0x24e)][_0x445be1(0x241)]=_0x445be1(0x1e8),_0x455fd6['style'][_0x445be1(0x28c)]='underline',_0x455fd6[_0x445be1(0x24e)]['cursor']=_0x445be1(0x213),_0x455fd6[_0x445be1(0x25a)](_0x445be1(0x1e4),function(){const _0x4a7d53=_0x445be1,_0x450a2c=document['getElementById'](_0x4a7d53(0x215)),_0x2de04f=document['getElementById'](_0x4a7d53(0x211));_0x450a2c[_0x4a7d53(0x21f)]=_0x23d60a,_0x2de04f[_0x4a7d53(0x1e4)]();}),_0x3e76ea[_0x445be1(0x27b)](_0x455fd6);}_0x3352ee[_0x445be1(0x27b)](_0x3e76ea),_0x3b7ac7[_0x445be1(0x27b)](_0x3352ee);}});})[_0x4585a8(0x255)](_0x544eb1=>{const _0x5046db=_0x4585a8;console[_0x5046db(0x245)](_0x5046db(0x270),_0x544eb1);});
-	
-</script>
-	  
-<script>async function takeScreenshot() {
-  const body = document.querySelector('body');
-  const isDarkMode = body.classList.contains('dark-mode');
-  const backgroundColor = isDarkMode ? '#0F0F0E' : '#ffffff'; // Black for dark mode, white for light mode
-  
-  try {
-    const element = document.querySelector('.screenshotcontainer'); // Capture the screenshotcontainer using the class name
-    if (!element) {
-      throw new Error('screenshotcontainer element not found');
-    }
+const fetchPromises1 = urls1.map(url => fetch(url).then(response => response.arrayBuffer()));
+const fetchPromises2 = urls2.map(url => fetch(url).then(response => response.arrayBuffer()));
 
-    const canvas = await html2canvas(element, {
-        width: 468,
-        height: element.offsetHeight + 12, 
-        y: -10,
-        x: -10,
-        useCORS: true,
-        backgroundColor: backgroundColor, // Set the background color based on mode
-        scale: window.devicePixelRatio,
-        logging: false, // Disable logging for production
-        foreignObjectRendering: false,
+function processAndStoreData1(dataArray) {
+    // Unique ID counter
+    let uniqueIdCounter = 1;
+
+    dataArray.forEach(data => {
+        const workbook = XLSX.read(new Uint8Array(data), { type: 'array' });
+        const sheetName = workbook.SheetNames[0];
+        const sheet = workbook.Sheets[sheetName];
+        const jsonData = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+
+        // Exclude header row
+        const dataWithoutHeader = jsonData.slice(1);
+
+        // Perform transformations and add unique ID
+        dataWithoutHeader.forEach(row => {
+            // Generate unique ID and shift columns
+            row.unshift(`${uniqueIdCounter++}`);
+
+            // Shift columns as needed
+            row.splice(12, 0, row.splice(4, 1)[0]);
+            row.splice(7, 0, row.splice(11, 1)[0]);
+            row.splice(9, 0, row.splice(10, 1)[0]);
+            row[15] = `${row[1]} 23/24`;
+                          row.splice(16, 1);
+
+            // Reorder columns
+            const reorderedRow = [
+                row[0],
+                row[15],
+                row[2],
+                row[3],
+                row[4],
+                row[5],
+                row[11],
+                row[6],
+                row[10],
+                row[8],
+                row[9],
+                row[7]
+            ];
+
+            allData1.push(reorderedRow);
+        });
     });
 
-    canvas.toBlob(blob => {
-      const link = document.createElement('a');
-      link.href = URL.createObjectURL(blob);
-      link.download = 'screenshot.png';
-      link.click();
-    }, 'image/png');
-  } catch (error) {
-    console.error('Error in takeScreenshot:', error);
-    // Handle errors appropriately (e.g., display to user or log)
-  }
+    // Extract values from columns 4, 5, 6, 7, 8, 9, and 10
+    const columnsToConvert = [4, 5, 6, 7, 8, 9, 10];
+    const columnValues = columnsToConvert.map(col => allData1.map(row => parseFloat(row[col])));
+
+    // Calculate percentiles
+    const percentiles = columnValues.map(values => {
+        const sorted = [...values].sort((a, b) => a - b);
+        return values.map(value => {
+            const rank = sorted.indexOf(value) + 1;
+            return (rank / sorted.length);
+        });
+    });
+
+    // Replace original values with percentiles
+    allData1.forEach((row, rowIndex) => {
+        columnsToConvert.forEach((col, colIndex) => {
+            row[col] = percentiles[colIndex][rowIndex].toFixed(3);
+        });
+    });
+}
+
+function processAndStoreData(dataArray) {
+    // Unique ID counter
+    let uniqueIdCounter = 1;
+
+    dataArray.forEach(data => {
+        const workbook = XLSX.read(new Uint8Array(data), { type: 'array' });
+        const sheetName = workbook.SheetNames[0];
+        const sheet = workbook.Sheets[sheetName];
+        const jsonData = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+
+        // Exclude header row
+        const dataWithoutHeader = jsonData.slice(1);
+
+        // Perform transformations and add unique ID
+        dataWithoutHeader.forEach(row => {
+            // Generate unique ID and shift columns
+            row.unshift(`${uniqueIdCounter++}`);
+
+            // Shift columns as needed
+            row.splice(12, 0, row.splice(4, 1)[0]);
+            row.splice(7, 0, row.splice(11, 1)[0]);
+            row.splice(9, 0, row.splice(10, 1)[0]);
+            row[15] = `${row[1]} 24/25`;
+            row.splice(16, 1);
+
+            // Reorder columns
+            const reorderedRow = [
+                row[0],
+                row[15],
+                row[2],
+                row[3],
+                row[4],
+                row[5],
+                row[11],
+                row[6],
+                row[10],
+                row[8],
+                row[9],
+                row[7]
+            ];
+
+            allData2.push(reorderedRow);
+        });
+    });
+
+
+    // Extract values from columns 4, 5, 6, 7, 8, 9, and 10
+    const columnsToConvert = [4, 5, 6, 7, 8, 9, 10];
+    const columnValues = columnsToConvert.map(col => allData2.map(row => parseFloat(row[col])));
+
+    // Calculate percentiles
+    const percentiles = columnValues.map(values => {
+        const sorted = [...values].sort((a, b) => a - b);
+        return values.map(value => {
+            const rank = sorted.indexOf(value) + 1;
+            return (rank / sorted.length);
+        });
+    });
+
+    // Replace original values with percentiles
+    allData2.forEach((row, rowIndex) => {
+        columnsToConvert.forEach((col, colIndex) => {
+            row[col] = percentiles[colIndex][rowIndex].toFixed(3);
+        });
+    });
 }
 
 
+Promise.all(fetchPromises1)
+    .then(responses => {
+        processAndStoreData(responses);
+
+    
+        // Fetch and process the remaining files
+        Promise.all(fetchPromises2)
+            .then(responses2 => {
+                processAndStoreData1(responses2);
+
+                // Concatenate intermediate data with new data
+                const finalData = allData2.concat(allData1);
+
+                // Reset and assign new unique IDs
+                finalData.forEach((row, index) => {
+                    row[0] = `${index + 1}`;
+                });
+                
+                finalData.forEach(row => {
+                    allDataAsString += row.join(',') + '\n';
+                });
+
+
+                const inputLines = allDataAsString.trim().split('\n');
+
+      const outputLines = [];
+  
+      for (const line of inputLines) {
+          // Split the line by comma
+          const parts = line.split(',');
+
+          // Extract the desired fields
+          const name = parts[1];
+          const age = parts[3];
+          const club = parts[2];
+
+          // Create the formatted string
+          const outputLine = `${name},${age},${club}`;
+
+          // Add the formatted string to the output array
+          outputLines.push(outputLine);
+      }
+
+const names = outputLines;
+const searchInput = document.getElementById('searchInput1');
+      searchInput.setAttribute("autocomplete", "off");
+ const matchingNamesContainer = document.getElementById("matchingNames");
+const searchButton = document.getElementById("searchButton");
+
+
+function updateMatchingNames() {
+const searchQuery = removeSpecialChars(searchInput.value.toLowerCase());
+const matchingNames = names.filter(function(name) {
+const [fullName] = name.split(",");
+  const normalizedName = removeSpecialChars(fullName.toLowerCase());
+    return normalizedName.includes(searchQuery);
+});
+
+matchingNamesContainer.innerHTML = "";
+
+matchingNames.forEach(function(name) {
+  const [fullName, team, age] = name.split(",");
+
+  const nameElement = document.createElement("div");
+  nameElement.classList.add("name");
+
+  const fullNameElement = document.createElement("span");
+  fullNameElement.textContent = fullName;
+  fullNameElement.classList.add("fullName");
+  nameElement.appendChild(fullNameElement);
+
+  const ageElement = document.createElement("span");
+  ageElement.textContent = " (" + age + ",";
+  ageElement.classList.add("age");
+  nameElement.appendChild(ageElement);
+
+  const teamElement = document.createElement("span");
+  teamElement.textContent = " " + team + ")";
+  teamElement.classList.add("team");
+  nameElement.appendChild(teamElement);
+
+  nameElement.addEventListener("click", function(event) {
+    const clickedElement = event.target.closest(".name");
+    if (clickedElement) {
+      const fullName = clickedElement.querySelector(".fullName").textContent;
+      const age = clickedElement.querySelector(".age").textContent.trim();
+      const team = clickedElement.querySelector(".team").textContent
+      .trim()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f\s]/g, '')
+      .replace(/[^a-zA-Z]/g, '');  
+      const searchQuery = fullName + "," + team + "," + age.substring(1, age.length - 1);
+  
+      searchInput.value = searchQuery; // Set the full query as the search input value
+      const enterKeyEvent = new KeyboardEvent("keyup", { key: "Enter" });
+      searchInput.dispatchEvent(enterKeyEvent); // Dispatch enter key event
+    }
+  });
+
+  matchingNamesContainer.appendChild(nameElement);
+              });
+            
+              if (searchQuery === "" && matchingNames.length === 0) {
+                matchingNamesContainer.style.display = "none";
+              } else {
+                matchingNamesContainer.style.display = "block";
+                matchingNamesContainer.style.padding = "8px";
+                matchingNamesContainer.style.position = "relative";
+                matchingNamesContainer.style.left = "13.3px";
+                matchingNamesContainer.style.zIndex = "9999"; // Set a high z-index value
+                matchingNamesContainer.style.width = "377px"; // Match the width of the search input
+                matchingNamesContainer.style.maxHeight = "267px"; // Limit height for long lists
+                matchingNamesContainer.style.overflowY = "auto"; // Enable scrolling if content exceeds height
+          
+                matchingNamesContainer.style.border = "1px solid #e0e0e0"; // Light gray border
+              }
+             
+              if (searchQuery === "") {
+                matchingNamesContainer.style.display = "none";
+              }
+            }
+
+searchInput.addEventListener("input", updateMatchingNames);
+searchInput.addEventListener("keyup", function(event) {
+if (event.key === "Enter") {
+  searchButton1.click(); // Trigger the search button click event
+} else if (event.key === "Backspace") {
+  updateMatchingNames();
+}
+});       
+
+
+
+
+const csvData = allDataAsString;
+let dataArray = csvData.trim().split('\n').map(line => line.split(','));
+
+
+
+
+function calculateEuclideanDifference(data1, data2) {
+let difference = 0;
+for (let i = 4; i <= 10; i++) {
+const metric1 = parseFloat(data1[i]);
+const metric2 = parseFloat(data2[i]);
+difference += Math.pow(metric1 - metric2, 2);
+}
+return Math.sqrt(difference);
+}
+
+
+
+const colorClasses = ['result-color-1', 'result-color-2', 'result-color-3', 'result-color-4', 'result-color-5', 'result-color-6', 'result-color-7', 'result-color-8', 'result-color-9', 'result-color-10', 'result-color-11', 'result-color-12', 'result-color-13', 'result-color-14', 'result-color-15', 'result-color-16', 'result-color-17', 'result-color-18', 'result-color-19', 'result-color-20', 'result-color-21', 'result-color-22', 'result-color-23', 'result-color-24', 'result-color-25', 'result-color-26', 'result-color-27', 'result-color-28', 'result-color-29', 'result-color-30', 'result-color-31', 'result-color-32', 'result-color-33', 'result-color-34', 'result-color-35', 'result-color-36', 'result-color-37'];
+
+let searchResults = []; // Declare the search results variable
+
+
+function removeSpecialChars(str) {
+return str.normalize('NFD').replace(/[\u0300-\u036f\s]/g, '') 
+.replace(/Ø/g, 'O')
+.replace(/ø/g, 'o')
+.replace(/ı/g, 'i');
+}
+
+function search(query) {
+const queryParts = query.split(',').map(part => part.trim()); // Split the query by commas and trim whitespace
+const name = queryParts[0]; // Extract the name part
+let age, team;
+
+// Extract age and team if they exist
+if (queryParts.length > 1) {
+age = queryParts[1].trim(); // Trim any leading or trailing spaces
+if (queryParts.length > 2) {
+team = queryParts[2].trim(); // Trim any leading or trailing spaces
+}
+}
+
+
+const results = dataArray.filter(data => {
+const normalizedName = removeSpecialChars(data[1].toLowerCase());
+const normalizedTeam = removeSpecialChars(data[2].toLowerCase());
+const normalizedAge = data[3].trim().toLowerCase(); // Trim any leading or trailing spaces
+
+
+// Check if the name matches
+const nameMatches = normalizedName.includes(removeSpecialChars(name.toLowerCase()));
+
+// Check if the age matches (or if age is not provided)
+const ageMatches = !age || normalizedAge === removeSpecialChars(age.toLowerCase());
+
+// Check if the team matches (or if team is not provided)
+const teamMatches = !team || normalizedTeam === removeSpecialChars(team.toLowerCase());
+
+// Return true if name matches and either age or team matches
+return nameMatches && ageMatches && teamMatches;
+});
+
+return results;
+}
+
+
+function createTable(teamName, teamIndex, color) {
+const resultsTable = document.getElementById('resultsTable');
+
+const headerNames = [
+];
+
+// Check if table headers exist
+const headersExist = resultsTable.querySelector('th') !== null;
+
+const table = headersExist ? resultsTable.querySelector('table') : document.createElement('table');
+table.classList.add('metrics-table');
+
+if (!headersExist) {
+// Create the table header
+const headerRow = document.createElement('tr');
+for (let i = 1; i < headerNames.length; i++) {
+const th = document.createElement('th');
+th.textContent = headerNames[i];
+headerRow.appendChild(th);
+}
+// We don't need a separate header for the x button anymore
+table.appendChild(headerRow);
+}
+
+
+
+
+const teamData = dataArray[teamIndex];
+const dataRow = document.createElement('tr');
+dataRow.style.display = 'flex';
+dataRow.style.alignItems = 'center';
+dataRow.style.position = 'relative';
+
+// Create a container for player data
+const playerDataContainer = document.createElement('div');
+playerDataContainer.style.display = 'flex';
+playerDataContainer.style.alignItems = 'center';
+playerDataContainer.style.flexGrow = '1';
+
+for (let i = 1; i <= 11; i++) {
+if (i === 1 || i === 2 || i === 3 || i === 11) {
+const td = document.createElement('td');
+if (i === 11) {
+td.textContent = teamData[i] + ' min';
+} else {
+td.textContent = teamData[i] + ',';
+}
+td.classList.add(color);
+playerDataContainer.appendChild(td);
+}
+}
+
+dataRow.appendChild(playerDataContainer);
+
+// Add a separate table cell for the "x" column
+const xCell = document.createElement('td');
+const xButton = document.createElement('button');
+xButton.textContent = 'x';
+xButton.classList.add('x-button');
+xCell.classList.add('x-cell');
+xButton.addEventListener('click', function () {
+  dataRow.remove(); // Remove the corresponding row from the table
+  const radarPolygons = document.querySelectorAll(`.radarPolygon.${color}`);
+  const radarLines = document.querySelectorAll(`.radarLines.${color}`);
+  const radarCircles = document.querySelectorAll(`.radarCircle.${color}`);
+
+  radarPolygons.forEach((polygon) => polygon.remove());
+  radarLines.forEach((line) => line.remove());
+  radarCircles.forEach((circle) => circle.remove());
+
+  // Get all remaining rows in the table
+  const remainingRows = document.querySelectorAll('.metrics-table tr:not(:first-child)');
+  
+  if (remainingRows.length > 0) {
+      // Get the last player's name from the last row
+      const lastRow = remainingRows[remainingRows.length - 1];
+      const lastPlayerName = lastRow.querySelector('td:first-child').textContent.split(',')[0];
+      
+      // Update similar players for the last remaining player
+      const lastPlayerData = dataArray.find(player => player[1] === lastPlayerName);
+      if (lastPlayerData) {
+          updateSimilarPlayers(lastPlayerData);
+      }
+  } else {
+      // If no players left, clear the similar players container
+      const similarPlayersContainer = document.getElementById('similarPlayersContainer');
+      if (similarPlayersContainer) {
+          similarPlayersContainer.innerHTML = '';
+      }
+  }
+});
+
+xCell.appendChild(xButton);
+dataRow.appendChild(xCell);
+
+table.appendChild(dataRow);
+
+if (!headersExist) {
+resultsTable.appendChild(table);
+}
+
+const combResults = dataArray[teamIndex].join(', ');
+
+
+
+const outerRadius = 130;
+const center = [0, 0];
+const angles = [0, 2 * Math.PI / 7, 4 * Math.PI / 7, 6 * Math.PI / 7, 8 * Math.PI / 7, 10 * Math.PI / 7, 12 * Math.PI / 7];
+
+function axisValueToCartesian(axis, value) {
+let angle = angles[axis - 1];
+angle += (2 * Math.PI / 7) * 0.2;
+const x = 165 * value * Math.cos(angle);
+const y = 165 * value * Math.sin(angle);
+return { x, y };
+}
+
+const svg = document.querySelector('.radar');
+const radarWrapper = svg.appendChild(document.createElementNS('http://www.w3.org/2000/svg', 'g'));
+radarWrapper.setAttribute('transform', 'translate(0,0)');
+radarWrapper.innerHTML = '';
+
+const data = [];
+const rowCols = combResults.split(',');
+for (let i = 4; i < 11; i++) {
+data.push({ axis: i - 3, value: parseFloat(rowCols[i]) });
+}
+
+const points = data.map(({ axis, value }) => {
+const { x, y } = axisValueToCartesian(axis, value);
+return `${x},${y}`;
+}).join(' ');
+
+const polyline = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
+polyline.setAttribute('class', `radarLines ${color}`); // Add the color class to the polyline
+polyline.setAttribute('points', `${points} ${points.split(' ')[0]}`);
+polyline.setAttribute('stroke-width', '3');
+polyline.setAttribute('fill', 'none');
+radarWrapper.appendChild(polyline);
+
+const polygon = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+polygon.setAttribute('class', `radarPolygon ${color}`); // Add the color class to the polygon
+polygon.setAttribute('points', points);
+polygon.style.fillOpacity = '0.2';
+radarWrapper.appendChild(polygon);
+
+data.forEach(({ axis, value }) => {
+const { x, y } = axisValueToCartesian(axis, value);
+const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+circle.setAttribute('class', `radarCircle ${color}`); // Add the color class to the circle
+circle.style.fillOpacity = '0.86'; // Set the opacity to 1 (fully opaque)
+circle.setAttribute('r', '6');
+circle.setAttribute('cx', x);
+circle.setAttribute('cy', y);
+radarWrapper.appendChild(circle);
+});
+}
+
+
+function createTableForTeam1() {
+const searchInput = document.getElementById('searchInput1');
+const searchButton = document.getElementById('searchButton1');
+const resultsTable = document.getElementById('resultsTable');
+
+
+const teamNames = new Set(); // Keep track of unique team names
+
+const teamNamesList = document.createElement('ul');
+teamNamesList.style.fontFamily = 'Arial, sans-serif'; 
+teamNamesList.style.listStyleType = 'none'; // Remove the bullet points
+teamNamesList.style.paddingLeft = '9px'; // Adjust the padding to move it further left
+resultsTable.appendChild(teamNamesList);
+
+
+let searchCounter = 0; // Initialize search counter
+
+searchButton.addEventListener('click', function () {
+const searchQuery = searchInput.value;
+const results = search(searchQuery);
+
+if (results) {
+const teamId = parseInt(results[0]); // Parse the team ID from the results
+
+const teamName = results[1] + ' (' + results[2] + ', ' + results[3] + ') - ' + results[11] + ' min';
+const color = colorClasses[searchCounter % colorClasses.length]; // Get the color class based on the search counter
+
+if (!teamNames.has(teamName)) {
+
+const teamNameItem = document.createElement('li');
+teamNameItem.textContent = teamName;
+teamNameItem.classList.add(color); // Apply the color class to the team name
+
+
+createTable(teamName, teamId - 1, color); // Pass the team ID and color to createTable
+searchCounter++;
+
+}
+} 
+
+});
+
+
+}
+
+
+
+createTableForTeam1();
+
+
+
+let colorIndex = 0; // Initialize color index
+
+searchButton1.addEventListener("click", function() {
+  const searchQuery = searchInput.value;
+  const searchedPlayer = search(searchQuery);
+
+  if (searchedPlayer.length > 0) {
+      const searchedPlayerData = searchedPlayer[0];
+      updateSimilarPlayers(searchedPlayerData);
+      colorIndex++;
+  }
+
+  searchInput.value = '';
+  updateMatchingNames();
+});
+
+function updateSimilarPlayers(playerData) {
+  const searchedPlayerIndex = parseInt(playerData[0]) - 1;
+  const similarPlayers = [];
+  
+  // Find the color class of the LAST player from their row in the table
+  const playerRows = document.querySelectorAll('.metrics-table tr:not(:first-child)');
+  let playerColor = '';
+  if (playerRows.length > 0) {
+      const lastPlayerRow = playerRows[playerRows.length - 1];
+      const lastPlayerCell = lastPlayerRow.querySelector('td:first-child');
+      // Get all color classes from the element
+      const classes = Array.from(lastPlayerCell.classList);
+      // Find the color class (starts with 'result-color-')
+      playerColor = classes.find(cls => cls.startsWith('result-color-'));
+  }
+  
+  for (let i = 0; i < dataArray.length; i++) {
+      if (i !== searchedPlayerIndex) {
+          const difference = calculateEuclideanDifference(playerData, dataArray[i]);
+          similarPlayers.push({ index: i, difference: difference });
+      }
+  }
+
+  similarPlayers.sort((a, b) => a.difference - b.difference);
+  const mostSimilarPlayers = similarPlayers.slice(0, 3);
+
+  const similarPlayersContainer = document.getElementById('similarPlayersContainer');
+  similarPlayersContainer.innerHTML = ''; // Clear existing content
+
+  const similarPlayerTable = document.createElement("table");
+  similarPlayerTable.classList.add("similar-table");
+  
+  // Set width and alignment for the table
+  similarPlayerTable.style.width = "100%";
+  similarPlayerTable.style.textAlign = "center";
+
+  const headerRow = document.createElement("tr");
+  const headerCell = document.createElement("th");
+  headerCell.setAttribute("colspan", "5");
+  headerCell.textContent = `Similar data to ${playerData[1]}`;
+  // Use the last player's color class instead of the first one
+  headerCell.classList.add(playerColor || colorClasses[colorIndex % colorClasses.length]);
+  headerRow.appendChild(headerCell);
+  similarPlayerTable.appendChild(headerRow);
+
+  const similarPlayerRow = document.createElement("tr");
+
+  for (let i = 0; i < mostSimilarPlayers.length; i++) {
+      const playerIndex = mostSimilarPlayers[i].index;
+      const playerName = dataArray[playerIndex][1];
+      
+      const playerCell = document.createElement("td");
+      playerCell.textContent = playerName;
+      playerCell.style.fontSize = "10.8px";
+      playerCell.style.textDecoration = "underline";
+      playerCell.style.cursor = "pointer";
+
+      playerCell.addEventListener("click", function() {
+          const searchInput = document.getElementById('searchInput1');
+          const searchButton = document.getElementById('searchButton1');
+          searchInput.value = playerName;
+          searchButton.click();
+      });
+
+      similarPlayerRow.appendChild(playerCell);
+  }
+
+  similarPlayerTable.appendChild(similarPlayerRow);
+  similarPlayersContainer.appendChild(similarPlayerTable);
+}
+
+}) })
+.catch(error => {
+console.error('Error fetching or processing data:', error);
+});
+
+
+</script>
+	  
+<script>async function takeScreenshot() {
+  const chartContainer = document.querySelector('.screenshotcontainer');
+  const isDarkMode = document.body.classList.contains('dark-mode');
+  
+  html2canvas(chartContainer, {
+    scale: 2,
+    backgroundColor: isDarkMode ? '#0F0F0E' : '#FFFFFF',
+    allowTaint: true,
+    useCORS: true,
+    logging: false,
+    foreignObjectRendering: false,
+    imageTimeout: 0,
+    onclone: function(clonedDoc) {
+      // Hide similar players table
+      const similarPlayersContainer = clonedDoc.getElementById('similarPlayersContainer');
+      if (similarPlayersContainer) {
+        similarPlayersContainer.style.display = 'none';
+      }
+      
+      // Hide everything above results table
+      const positionSwitcher = clonedDoc.querySelector('.position-switcher-container');
+      const searchContainer = clonedDoc.querySelector('.search-container');
+      if (positionSwitcher) positionSwitcher.style.display = 'none';
+      if (searchContainer) searchContainer.style.display = 'none';
+      
+      // Fix SVG positioning
+      const radarSVG = clonedDoc.querySelector('.radar');
+      if (radarSVG) {
+        radarSVG.style.display = 'block';
+        radarSVG.style.margin = '0 auto';
+        
+        // Ensure transform is properly applied to SVG's inner group
+        const svgGroup = radarSVG.querySelector('g');
+        if (svgGroup) {
+          svgGroup.setAttribute('transform', 'translate(195.5, 195.5)');
+        }
+      }
+    }
+  }).then(canvas => {
+    const link = document.createElement('a');
+    link.href = canvas.toDataURL('image/png');
+    link.download = 'DataMB Screenshot.png';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
+}
 
   // Function to toggle dark mode
   function toggleDarkMode() {
@@ -1176,48 +1599,20 @@ const _0x4585a8=_0x18a8;(function(_0x260e80,_0x16493c){const _0x494a7b=_0x18a8,_
     body.classList.add("dark-mode");
   }
 
-           
-
-
-
-</script>
-<div class="emptycontainer"></div>
-
-
-        <div class="finalcontainer">
-
-<center><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7677714701428206"
-crossorigin="anonymous"></script>
-<!-- radarplotsearch -->
-<ins class="adsbygoogle"
-style="display:block"
-data-ad-client="ca-pub-7677714701428206"
-data-ad-slot="6673239737"
-data-ad-format="auto"
-data-full-width-responsive="true"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script></center>
-</div>
-
-
-<script>
-    // Function to scroll down a tiny bit
-    function scrollDown() {
-        window.scrollBy(0, 100); // Adjust the value (100) to change the scroll distance
-    }
-
-    // Function to scroll up a tiny bit
-    function scrollUp() {
-        window.scrollBy(0, -80); // Adjust the value (-80) to change the scroll distance
-    }
-
-    // Combine both actions with a small timer between them
-    window.onload = function() {
-        scrollDown();
-        setTimeout(scrollUp, 100); // Adjust the delay time (1000ms = 1 second)
-    };
-</script>
-
+</script></div></div>
+<center>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7677714701428206"
+       crossorigin="anonymous"></script>
+  <!-- radarplotsearch -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-7677714701428206"
+       data-ad-slot="6673239737"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script></center>
 </body>
 </html>
+

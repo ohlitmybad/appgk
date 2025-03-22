@@ -1,0 +1,17 @@
+{
+  "search": {
+    "placeholder2": "Chercher un gardien..."
+  },
+  "radar": {
+    "a": "Court%",
+    "b": "Long%",
+    "c": "Passes",
+    "d": "Sorties",
+    "e": "Aériens",
+    "f": "Actions Déf",
+    "g": "Buts Empêchés"
+  },
+  "similar": {
+    "to": "Données similaires à"
+  }
+} 

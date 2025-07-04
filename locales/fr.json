@@ -3,13 +3,13 @@
     "placeholder2": "Chercher un gardien..."
   },
   "radar": {
-    "a": "Court%",
-    "b": "Long%",
-    "c": "Passes",
-    "d": "Sorties",
-    "e": "Aériens",
-    "f": "Actions Déf",
-    "g": "Buts Empêchés"
+    "short": "Court%",
+    "long": "Long%",
+    "passes": "Passes",
+    "int": "Interceptions",
+    "aerial": "Aériens",
+    "save": "% Arrêts",
+    "prevented": "PSxG-GA"
   },
   "similar": {
     "to": "Données similaires à"

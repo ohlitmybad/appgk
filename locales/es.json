@@ -1,0 +1,17 @@
+{
+  "search": {
+    "placeholder2": "Introduce nombre de portero..."
+  },
+  "radar": {
+    "short": "Corto%",
+    "long": "Largo%",
+    "passes": "Pases",
+    "int": "Intercepciones",
+    "aerial": "Aéreos ganados",
+    "save": "Parada%",
+    "prevented": "PSxG-GA"
+  },
+  "similar": {
+    "to": "Datos similares a"
+  }
+} 

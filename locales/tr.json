@@ -1,0 +1,17 @@
+{
+  "search": {
+    "placeholder2": "Kaleci adı girin..."
+  },
+  "radar": {
+    "short": "Kısa%",
+    "long": "Uzun%",
+    "passes": "Paslar",
+    "int": "Müdahaleler",
+    "aerial": "Hava kazanma",
+    "save": "Kurtarış%",
+    "prevented": "PSxG-GA"
+  },
+  "similar": {
+    "to": "Benzer veri"
+  }
+} 

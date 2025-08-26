@@ -1,0 +1,17 @@
+{
+  "search": {
+    "placeholder2": "Chercher un gardien..."
+  },
+  "radar": {
+    "short": "Court%",
+    "long": "Long%",
+    "passes": "Passes",
+    "int": "Interceptions",
+    "aerial": "Aériens",
+    "save": "% Arrêts",
+    "prevented": "PSxG-GA"
+  },
+  "similar": {
+    "to": "Données similaires à"
+  }
+} 

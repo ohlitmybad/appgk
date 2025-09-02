@@ -1,0 +1,30 @@
+{
+  "search": {
+    "placeholder2": "Kaleci adı girin..."
+  },
+  "radar": {
+    "short": "Kısa%",
+    "long": "Uzun%",
+    "passes": "Paslar",
+    "int": "Müdahaleler",
+    "aerial": "Hava kazanma",
+    "save": "Kurtarış%",
+    "prevented": "PSxG-GA"
+  },
+  "similar": {
+    "to": "Benzer veri"
+  },
+  "header": {
+    "percentiles": "Yüzdelikler",
+    "clickforinfo": "Tam metrik adını görmek için başlığa tıklayın",
+    "percentilesvstop7leagues": "En İyi 7 Lig vs Yüzdelikler",
+    "savepercentage": "Kurtarış yüzdesi %",
+    "aerialduelswon": "Hava mücadeleleri kazanıldı",
+    "interceptionspadj": "Müdahaleler (PAdj)",
+    "passescompleted": "Tamamlanan paslar",
+    "longpassaccuracy": "Uzun pas doğruluğu %",
+    "shortpasscompletion": "Kısa pas tamamlama %",
+    "preventedgoals": "Önlenen goller",
+    "minutesplayed": "Oynanan dakikalar"
+  }
+} 

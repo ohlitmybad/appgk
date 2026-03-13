@@ -1,0 +1,30 @@
+{
+  "search": {
+    "placeholder2": "Chercher un gardien..."
+  },
+  "radar": {
+    "short": "Court%",
+    "long": "Long%",
+    "passes": "Passes",
+    "int": "Interceptions",
+    "aerial": "Aériens",
+    "save": "% Arrêts",
+    "prevented": "PSxG-GA"
+  },
+  "similar": {
+    "to": "Données similaires à"
+  },
+  "header": {
+    "percentiles": "Centiles",
+    "clickforinfo": "Cliquez sur un en-tête pour voir le nom complet de la métrique",
+    "percentilesvstop7leagues": "Centiles parmi 7 grands championnats",
+    "savepercentage": "Pourcentage d'arrêts %",
+    "aerialduelswon": "Duels aériens gagnés",
+    "interceptionspadj": "Interceptions (PAdj)",
+    "passescompleted": "Passes réussies",
+    "longpassaccuracy": "Précision des passes longues %",
+    "shortpasscompletion": "Précision des passes courtes %",
+    "preventedgoals": "Buts évités",
+    "minutesplayed": "Minutes jouées"
+  }
+} 
